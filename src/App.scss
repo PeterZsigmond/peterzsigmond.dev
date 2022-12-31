@@ -5,9 +5,28 @@ $footer: #2A2B5C;
 
 $sidebar-width: 282px;
 
+@font-face {
+    font-family: Autobus;
+    src: url(fonts/autobus-bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Proxima-Nova;
+    src: url(fonts/proxima-nova.otf);
+}
+
+@font-face {
+    font-family: Proxima-Nova;
+    src: url(fonts/proxima-nova-bold.otf);
+    font-weight: bold;
+}
+
 body {
     background-color: $body;
     margin: 0px;
+    font-family: Proxima-Nova;
+    color: $white;
 
     .sidebar {
         background-color: $sidebar;
@@ -16,13 +35,15 @@ body {
         position: fixed;
 
         .title {
-            color: $white;
+            font-family: Autobus;
+            font-weight: bold;
+            font-size: 34px;
+            text-align: center;
         }
 
         .menu {
             .element {
                 p {
-                    color: $white;
                 }
             }
         }
@@ -36,12 +57,17 @@ body {
 
         .hero {
             .left {
-
                 height: 1200px;
 
                 h1 {
                     margin: 0px;
-                    color: $white;
+                    font-weight: bold;
+                    font-size: 67px;
+                }
+
+                h2 {
+                    font-weight: normal;
+                    font-size: 50px;
                 }
             }
         }
@@ -52,7 +78,6 @@ body {
             border-radius: 10px;
 
             .copyright {
-                color: $white;
                 text-align: center;
                 margin: 0;
                 position: relative;
