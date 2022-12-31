@@ -28,6 +28,7 @@ function App() {
       </div>
 
       <div className="main">
+
         <div className="hero">
           <div className="left">
             <h1>Hi there, I'm Peter Zsigmond!</h1>
@@ -39,6 +40,12 @@ function App() {
             <img src="" />
           </div>
         </div>
+
+        <footer>
+          <p className="copyright">Peter Zsigmond, 2023</p>
+          <p className="version">(v0.0.1)</p>
+        </footer>
+
       </div>
     </div>
   );

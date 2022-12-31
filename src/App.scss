@@ -1,6 +1,7 @@
 $body: #191A42;
 $sidebar: #20214D;
 $white: #DDDDDD;
+$footer: #2A2B5C;
 
 $sidebar-width: 282px;
 
@@ -12,7 +13,7 @@ body {
         background-color: $sidebar;
         height: 100vh;
         width: $sidebar-width;
-        position: absolute;
+        position: fixed;
 
         .title {
             color: $white;
@@ -30,14 +31,40 @@ body {
     .main {
         background-color: $body;
         width: calc(100vw - $sidebar-width);
-        margin-left: $sidebar-width;
+        position: relative;
+        left: $sidebar-width;
 
         .hero {
             .left {
+
+                height: 1200px;
+
                 h1 {
                     margin: 0px;
                     color: $white;
                 }
+            }
+        }
+
+        footer {
+            height: 45px;
+            background-color: $footer;
+            border-radius: 10px;
+
+            .copyright {
+                color: $white;
+                text-align: center;
+                margin: 0;
+                position: relative;
+                top: 14px;
+            }
+
+            .version {
+                color: grey;
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+                margin: 0;
             }
         }
     }
