@@ -35,6 +35,13 @@ function Layout() {
           </div>
         </div>
 
+        <img src={require("./img/github.png")}
+             alt="GitHub"
+             className="github"
+             onClick={() => 
+              window.open("https://github.com/PeterZsigmond/peterzsigmond.dev", "_blank")
+             }/>
+
       </div>
 
       <div className="main">
