@@ -1,36 +1,37 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import './Layout.scss';
 
 function Layout() {
   return (
     <div>
       <div className="sidebar">
-        <p className="title">peterzsigmond.dev</p>
-
+        
+        <p className="title"><NavLink to="/">peterzsigmond.dev</NavLink></p>
+        
         <div className="menu">
-          <div className="element">
-            <Link to="/">
-              <img src="" />
+          <div className="element about">
+            <NavLink to="/" activeClassName="active">
+              <i className="icon bi-person"></i>
               <p>About</p>
-            </Link>
+            </NavLink>
           </div>
           <div className="element">
-            <Link to="/projects">
-              <img src="" />
+            <NavLink to="/projects" activeClassName="active">
+              <i className="icon bi-ui-checks"></i>
               <p>Projects</p>
-            </Link>
+            </NavLink>
           </div>
           <div className="element">
-            <Link to="/contact">
-              <img src="" />
+            <NavLink to="/contact" activeClassName="active">
+              <i className="icon bi-envelope"></i>
               <p>Contact</p>
-            </Link>
+            </NavLink>
           </div>
           <div className="element">
-            <Link to="/cheatsheet">
-              <img src="" />
+            <NavLink to="/cheatsheet" activeClassName="active">
+              <i className="icon bi-file-code"></i>
               <p>Cheatsheet</p>
-            </Link>
+            </NavLink>
           </div>
         </div>
 
