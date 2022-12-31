@@ -11,8 +11,9 @@ function About() {
             <button>Check out my Projects</button>
           </div>
           <div className="right">
-            asd
-            <img src="" />
+            <div className="circle">
+              <img src={require("./img/peterzsigmond.png")} alt="Peter Zsigmond" />
+            </div>
           </div>
         </div>
 

@@ -50,7 +50,29 @@ $element: #3A3B73;
     }
 
     .right {
+        float: right;
+        width: 233px;
 
+        .circle {
+            background-color: #3A3B73;
+            width: 233px;
+            height: 233px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            
+            img {
+                height: 220px;
+                width: 220px;
+
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
     }
 }
 
