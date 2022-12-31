@@ -1,15 +1,149 @@
+$white: #DDDDDD;
+$green: #3F9F4E;
+$element: #3A3B73;
+
 .hero {
+    width: 910px;
+    margin: 124px auto 50px auto;
+    height: 430px;
+
     .left {
+        width: 677px;
+        float: left;
 
         h1 {
             margin: 0px;
             font-weight: bold;
             font-size: 67px;
+            color: $green;
+
+            span {
+                background: linear-gradient(90deg, #4FB09F -2.79%, #4799A6 -2.79%, #4289AA -2.79%, #7A31D8 105.32%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
         }
 
         h2 {
             font-weight: normal;
             font-size: 50px;
+        }
+
+        p {
+            font-size: 21px;
+        }
+
+        button {
+            width: 231px;
+            height: 42px;
+            margin-top: 30px;
+            border-radius: 8px;
+            background: linear-gradient(89.71deg, #7A31D8 0%, rgba(61, 130, 118, 0.72) 100%);
+            color: $white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            font-family: Proxima-Nova;
+        }
+    }
+
+    .right {
+
+    }
+}
+
+.skills {
+    margin: auto;
+    width: 910px;
+    height: 500px;
+
+    .selector {
+        width: 500px;
+        height: 73px;
+        background-color: $element;
+        border-radius: 50px;
+        margin: auto;
+
+        .left {
+            width: 50%;
+            height: inherit;
+            float: left;
+
+            .box {
+                margin-top: 7px;
+                height: 59px;
+                background-color: $green;
+                border-radius: 50px;
+                width: 240px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 7px;
+                cursor: pointer;
+
+                p {
+                    font-size: 13px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+            height: inherit;
+            float: right;
+
+            .box {
+                margin-top: 7px;
+                height: 59px;
+                border-radius: 50px;
+                width: 240px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 13px;
+                text-align: center;
+            }
+        }
+    }
+
+    .elements {
+        margin: auto;
+        margin-top: 41px;
+        width: 658px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+
+        .element {
+            background-color: #3A3B73;
+            border-radius: 9px;
+            height: 120px;
+            width: 112px;
+            padding-top: 1px;
+
+            img {
+                height: 35px;
+                width: 35px;
+                display: block;
+                margin: auto;
+                margin-top: 19px;
+            }
+
+            p {
+                margin-top: 19px;
+                font-weight: bold;
+                text-align: center;
+                font-size: 16px;
+            }
         }
     }
 }
