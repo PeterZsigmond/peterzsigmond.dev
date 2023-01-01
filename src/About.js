@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './About.scss';
 
 function About() {
@@ -8,7 +9,7 @@ function About() {
             <h1>Hi there,<br />I'm <span>Peter Zsigmond!</span></h1>
             <h2>IT Engineer</h2>
             <p>I'm into web development, software development and DevOps.<br />I graduated from university in 2023.</p>
-            <button>Check out my Projects</button>
+            <Link to="/projects"><button>Check out my Projects</button></Link>
           </div>
           <div className="right">
             <div className="circle">
