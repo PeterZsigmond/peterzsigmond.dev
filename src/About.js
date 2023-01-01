@@ -1,7 +1,36 @@
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 import './About.scss';
 
 function About() {
+
+  let skills = [
+    [
+      {name: 'VS Code', img: 'vs-code'},
+      {name: 'Git', img: 'git'},
+      {name: 'AWS', img: 'aws'},
+      {name: 'Adobe Photoshop', img: 'photoshop'},
+      {name: 'Figma', img: 'figma'},
+      {name: 'Docker', img: 'docker'},
+      {name: 'Kubernetes', img: 'kubernetes'}
+    ],
+    [
+      {name: 'Assembly', img: 'asm'},
+      {name: 'C', img: 'c'},
+      {name: 'C++', img: 'cpp'},
+      {name: 'C#', img: 'c-sharp'},
+      {name: 'Java', img: 'java'},
+      {name: 'PHP', img: 'php'},
+      {name: 'JavaScript', img: 'js'},
+      {name: 'Python', img: 'python'},
+      {name: 'SQL', img: 'sql'}
+    ]
+  ];
+  
+  const [skill, setSkill] = useState(0);
+
+  let elements = skills[skill];
+
   return (
       <div>
         <div className="hero">
@@ -21,12 +50,12 @@ function About() {
         <div className="skills">
           <div className="selector">
             <div className="left">
-              <div className="box">
+              <div className={"box" + (skill == 0 ? ' active': '')} onClick={() => setSkill(0)}>
                 <p>Tools I Use for Development</p>
               </div>
             </div>
             <div className="right">
-              <div className="box">
+              <div className={"box" + (skill == 1 ? ' active': '')} onClick={() => setSkill(1)}>
                 <p>Programming Languages I Know</p>
               </div>
             </div>
@@ -34,34 +63,14 @@ function About() {
 
           <div className="elements">
 
-            <div className="element">
-              <img src={require("./img/vs-code.png")} alt="VS Code" />
-              <p>VS Code</p>
-            </div>
-            <div className="element">
-              <img src={require("./img/git.png")} alt="VS Code" />
-              <p>Git</p>
-            </div>
-            <div className="element">
-              <img src={require("./img/aws.png")} alt="VS Code" />
-              <p>AWS</p>
-            </div>
-            <div className="element">
-              <img src={require("./img/photoshop.png")} alt="VS Code" />
-              <p>Adobe Photoshop</p>
-            </div>
-            <div className="element">
-              <img src={require("./img/figma.png")} alt="VS Code" />
-              <p>Figma</p>
-            </div>
-            <div className="element">
-              <img src={require("./img/docker.png")} alt="VS Code" />
-              <p>Docker</p>
-            </div>
-            <div className="element">
-              <img src={require("./img/kubernetes.png")} alt="VS Code" />
-              <p>Kubernetes</p>
-            </div>
+          {elements.map((element, index) => {
+              return (
+                <div className="element" key={index}>
+                  <img src={require("./img/" + element.img + ".png")} alt={element.name} />
+                  <p>{element.name}</p>
+                </div>
+              );
+          })}
 
           </div>
 
