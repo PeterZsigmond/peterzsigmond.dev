@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 import './Layout.scss';
 
 function Layout() {
@@ -6,29 +6,29 @@ function Layout() {
     <div>
       <div className="sidebar">
         
-        <p className="title"><NavLink to="/">peterzsigmond.dev</NavLink></p>
+        <p className="title"><Link to="/">peterzsigmond.dev</Link></p>
         
         <div className="menu">
           <div className="element about">
-            <NavLink to="/" activeClassName="active">
+            <NavLink to="/" className={({ isActive }) => isActive ? "active" : ''}>
               <i className="icon bi-person"></i>
               <p>About</p>
             </NavLink>
           </div>
           <div className="element">
-            <NavLink to="/projects" activeClassName="active">
+            <NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ''}>
               <i className="icon bi-ui-checks"></i>
               <p>Projects</p>
             </NavLink>
           </div>
           <div className="element">
-            <NavLink to="/contact" activeClassName="active">
+            <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ''}>
               <i className="icon bi-envelope"></i>
               <p>Contact</p>
             </NavLink>
           </div>
           <div className="element">
-            <NavLink to="/cheatsheet" activeClassName="active">
+            <NavLink to="/cheatsheet" className={({ isActive }) => isActive ? "active" : ''}>
               <i className="icon bi-file-code"></i>
               <p>Cheatsheet</p>
             </NavLink>
@@ -39,7 +39,7 @@ function Layout() {
              alt="GitHub"
              className="github"
              onClick={() => 
-              window.open("https://github.com/PeterZsigmond/peterzsigmond.dev", "_blank")
+              window.open("https://github.com/PeterZsigmond", "_blank")
              }/>
 
       </div>
