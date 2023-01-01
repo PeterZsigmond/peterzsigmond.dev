@@ -50,12 +50,12 @@ function About() {
         <div className="skills">
           <div className="selector">
             <div className="left">
-              <div className={"box" + (skill == 0 ? ' active': '')} onClick={() => setSkill(0)}>
+              <div className={"box" + (skill === 0 ? ' active': '')} onClick={() => setSkill(0)}>
                 <p>Tools I Use for Development</p>
               </div>
             </div>
             <div className="right">
-              <div className={"box" + (skill == 1 ? ' active': '')} onClick={() => setSkill(1)}>
+              <div className={"box" + (skill === 1 ? ' active': '')} onClick={() => setSkill(1)}>
                 <p>Programming Languages I Know</p>
               </div>
             </div>
