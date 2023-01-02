@@ -1,6 +1,6 @@
 @import '~bootstrap-icons/font/bootstrap-icons';
 
-$body: #191A42;
+$main: #191A42;
 $sidebar: #20214D;
 $white: #DDDDDD;
 $footer: #2A2B5C;
@@ -25,7 +25,6 @@ $sidebar-width: 282px;
 }
 
 body {
-    background-color: $body;
     margin: 0px;
     font-family: Proxima-Nova;
     color: $white;
@@ -112,12 +111,12 @@ body {
     }
 
     .main {
-        background-color: $body;
-        width: calc(100vw - $sidebar-width);
+        background-color: $main;
+        width: calc(100% - $sidebar-width);
         min-height: 100vh;
         position: relative;
         left: $sidebar-width;
-        padding-top: 1px;
+        overflow: auto;
 
         p {
             margin: 0;
