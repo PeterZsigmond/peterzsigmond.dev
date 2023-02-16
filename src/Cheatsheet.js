@@ -1,6 +1,8 @@
+import './Cheatsheet.scss';
+
 function Cheatsheet() {
     return (
-          <div><p>cheatsheet</p></div>
+          <div className="cheatsheet"><p>This page will come soon.</p></div>
     );
   }
   
