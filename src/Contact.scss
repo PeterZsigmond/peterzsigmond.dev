@@ -1,0 +1,18 @@
+$white: #DDDDDD;
+
+.contact {
+    width: 500px;
+    height: 180px;
+    margin: auto;
+    background-color: #3A3B73;
+    border-radius: 8px;
+    margin-top: 100px;
+    padding: 30px;
+    box-sizing: border-box;
+    
+    p {
+        a {
+            color: $white;
+        }
+    }
+}
