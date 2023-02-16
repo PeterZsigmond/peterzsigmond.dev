@@ -42,7 +42,7 @@ function About() {
           </div>
           <div className="right">
             <div className="circle">
-              <img src={require("../img/peterzsigmond.png")} alt="Peter Zsigmond" />
+              <img src={require("../img/peterzsigmond/peterzsigmond.png")} alt="Peter Zsigmond" />
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ function About() {
           {elements.map((element, index) => {
               return (
                 <div className="element" key={index}>
-                  <img src={require("../img/" + element.img + ".png")} alt={element.name} />
+                  <img src={require("../img/skills/" + element.img + ".png")} alt={element.name} />
                   <p>{element.name}</p>
                 </div>
               );
