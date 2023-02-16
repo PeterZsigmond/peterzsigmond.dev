@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from './Layout';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
-import Cheatsheet from './Cheatsheet';
-import NoPage from './NoPage';
+import Layout from './Layout/Layout';
+import About from './About/About';
+import Projects from './Projects/Projects';
+import Contact from './Contact/Contact';
+import Cheatsheet from './Cheatsheet/Cheatsheet';
+import NoPage from './NoPage/NoPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

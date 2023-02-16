@@ -35,7 +35,7 @@ function Layout() {
           </div>
         </div>
 
-        <img src={require("./img/github.png")}
+        <img src={require("../img/github.png")}
              alt="GitHub"
              className="github"
              onClick={() => 
