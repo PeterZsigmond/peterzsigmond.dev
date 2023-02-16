@@ -4,18 +4,19 @@ $element: #3A3B73;
 
 .hero {
     width: 910px;
-    margin: 124px auto 50px auto;
-    height: 430px;
+    margin: 100px auto 70px auto;
+    height: 320px;
 
     .left {
-        width: 677px;
+        width: 640px;
         float: left;
 
         h1 {
             margin: 0px;
             font-weight: bold;
-            font-size: 67px;
+            font-size: 60px;
             color: $green;
+            line-height: 56px;
 
             span {
                 background: linear-gradient(90deg, #4FB09F -2.79%, #4799A6 -2.79%, #4289AA -2.79%, #7A31D8 105.32%);
@@ -28,17 +29,19 @@ $element: #3A3B73;
 
         h2 {
             font-weight: normal;
-            font-size: 50px;
+            font-size: 42px;
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
 
         p {
-            font-size: 21px;
+            font-size: 19px;
         }
 
         button {
             width: 231px;
             height: 42px;
-            margin-top: 30px;
+            margin-top: 25px;
             border-radius: 8px;
             background: linear-gradient(60deg, #7A31D8 0%, rgba(61, 130, 118, 0.72) 100%);
             font-size: 16px;
@@ -52,7 +55,7 @@ $element: #3A3B73;
 
     .right {
         float: right;
-        width: 233px;
+        width: 270px;
 
         .circle {
             background-color: #3A3B73;
@@ -127,8 +130,9 @@ $element: #3A3B73;
             }
 
             p {
-                font-size: 13px;
+                font-size: 14px;
                 text-align: center;
+                margin-top: 2px;
             }
         }
     }
