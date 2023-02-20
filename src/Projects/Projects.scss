@@ -1,0 +1,40 @@
+$element: #3A3B73;
+
+.projects {
+    margin: auto;
+    width: 1000px;
+    height: 800px;
+    margin-top: 80px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        
+        .card {
+            width: 300px;
+            height: 600px;
+            background-color: $element;
+            border-radius: 5px;
+            overflow: hidden;
+
+            img {
+                width: inherit;
+            }
+
+            h3 {
+
+            }
+
+            p {
+
+            }
+        }
+    }
+}
