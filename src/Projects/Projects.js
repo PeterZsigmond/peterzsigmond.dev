@@ -6,17 +6,25 @@ function Projects() {
             {
                   img: 'kubeflow',
                   title: 'Bachelor\'s thesis',
-                  desc: 'Title: Management of machine learning application on a distributed container platform\n\nI gained a lot of experience, while making my bachelor\'s thesis. \n\nLink: https://bit.ly/3XIB6pl'
+                  desc: 'Title: Management of machine learning application on a distributed container platform\n\n\
+                  While making my bachelor\'s thesis, I gained experiences with Machine Learning, Container orchestration, Automatization, Cloud services, etc.\n\
+                  I used Kubeflow as a ML workflow toolset, that runs on Kubernetes.',
+                  link: 'https://bit.ly/3XIB6pl'
             },
             {
                   img: 'peterzsigmondOS',
                   title: 'peterzsigmondOS',
-                  desc: 'A very basic x86 OS. It includes some images, and a terminal, where the users can write their own hex coded x86 instructions, which then the OS can run. Theoretically, with this terminal, any task can be done on a computer. Link: https://github.com/PeterZsigmond/peterzsigmondOS'
+                  desc: 'A very basic x86 OS. It includes some images, and a terminal,\
+                  where the users can write their own hex coded x86 instructions, which then the OS can run.\
+                  Theoretically, with this terminal, any task can be done on a computer.\n\n\
+                  Regardless as I only did this as a hobby, I learned a lot about the x86 architecture.',
+                  link: 'https://github.com/PeterZsigmond/peterzsigmondOS'
             },
             {
                   img: 'peterzsigmond.dev',
                   title: 'peterzsigmond.dev',
-                  desc: 'This personal portfolio webpage. It was made in React.'
+                  desc: 'This is my personal portfolio webpage. I made it in React, and used other tools like Sass and Docker.',
+                  link: 'https://github.com/PeterZsigmond/peterzsigmond.dev'
             }
     ];
 
@@ -33,6 +41,7 @@ function Projects() {
                                     </div>
                                     <h3>{project.title}</h3>
                                     <p>{project.desc}</p>
+                                    <a href={project.link} target="_blank"><i className="icon bi-link"></i></a>
                               </div>
                         );
                   })}
