@@ -14,10 +14,10 @@ function Projects() {
             {
                   img: 'peterzsigmondOS',
                   title: 'peterzsigmondOS',
-                  desc: 'A very basic x86 OS. It includes some images, and a terminal,\
-                  where the users can write their own hex coded x86 instructions, which then the OS can run.\
+                  desc: 'A very basic x86 OS. It includes some images and a terminal,\
+                  where the users can write their own hex coded x86 instructions, which the OS can then run.\
                   Theoretically, with this terminal, any task can be done on a computer.\n\n\
-                  Regardless as I only did this as a hobby, I learned a lot about the x86 architecture.',
+                  I learned a lot about how the x86 architecture works.',
                   link: 'https://github.com/PeterZsigmond/peterzsigmondOS'
             },
             {
