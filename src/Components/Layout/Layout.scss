@@ -38,16 +38,18 @@ body {
         position: fixed;
         z-index: 1;
         
-        &.hidden {
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0.2s, opacity 0.2s linear;
-        }
-        
-        &:not(.hidden) {
-            visibility: visible;
-            opacity: 1;
-            transition: visibility 0.2s, opacity 0.2s linear;
+        @media (max-width: $menu-break) {
+            &.hidden {
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0.2s, opacity 0.2s linear;
+            }
+            
+            &:not(.hidden) {
+                visibility: visible;
+                opacity: 1;
+                transition: visibility 0.2s, opacity 0.2s linear;
+            }
         }
 
         .title {
@@ -137,16 +139,16 @@ body {
         @media (max-width: $menu-break) {
             left: 0;
             width: 100%;
-        }
 
-        &.hidden {
-            opacity: 0.9;
-            transition: opacity 0.2s linear;
-        }
-        
-        &:not(.hidden) {
-            opacity: 1;
-            transition: opacity 0.2s linear;
+            &.hidden {
+                opacity: 0.9;
+                transition: opacity 0.2s linear;
+            }
+            
+            &:not(.hidden) {
+                opacity: 1;
+                transition: opacity 0.2s linear;
+            }
         }
 
         .menu-button {
