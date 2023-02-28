@@ -1,10 +1,18 @@
 import { Outlet, Link, NavLink } from "react-router-dom";
+import { useState } from 'react';
 import './Layout.scss';
 
 function Layout() {
+
+  const [menuHidden, setMenuState] = useState(true);
+
+  const toggleMenu = () => {
+    setMenuState(current => !current);
+  };
+
   return (
     <div>
-      <div className="sidebar">
+      <div className={"sidebar" + (menuHidden ? ' hidden' : '')}>
         
         <p className="title"><Link to="/">peterzsigmond.dev</Link></p>
         
@@ -46,7 +54,13 @@ function Layout() {
 
       <div className="main">
 
-      <Outlet />
+        <div className="menu-button" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+
+        <Outlet />
 
         <footer>
           <p className="copyright">Peter Zsigmond, 2023</p>

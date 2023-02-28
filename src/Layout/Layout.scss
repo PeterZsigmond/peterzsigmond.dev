@@ -4,8 +4,10 @@ $main: #191A42;
 $sidebar: #20214D;
 $white: #DDDDDD;
 $footer: #2A2B5C;
+$element: #3A3B73;
 
 $sidebar-width: 282px;
+$menu-break: 1260px;
 
 @font-face {
     font-family: Autobus;
@@ -34,6 +36,19 @@ body {
         height: 100vh;
         width: $sidebar-width;
         position: fixed;
+        z-index: 1;
+        
+        &.hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.2s linear;
+        }
+        
+        &:not(.hidden) {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0.2s, opacity 0.2s linear;
+        }
 
         .title {
             font-family: Autobus;
@@ -117,6 +132,33 @@ body {
         position: relative;
         left: $sidebar-width;
         overflow: auto;
+        z-index: 0;
+
+        @media (max-width: $menu-break) {
+            left: 0;
+            width: 100%;
+        }
+
+        .menu-button {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            right: 40px;
+            top: 40px;
+            display: none;
+
+            @media (max-width: $menu-break) {
+                display: block;
+            }
+
+            .bar {
+                background-color: #3A3B73;
+                width: inherit;
+                height: 4px;
+                margin-bottom: 6px;
+                border-radius: 4px;
+            }
+        }
 
         p {
             margin: 0;
