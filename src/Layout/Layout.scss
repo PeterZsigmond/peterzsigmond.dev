@@ -139,6 +139,16 @@ body {
             width: 100%;
         }
 
+        &.hidden {
+            opacity: 0.9;
+            transition: opacity 0.2s linear;
+        }
+        
+        &:not(.hidden) {
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+
         .menu-button {
             position: absolute;
             height: 30px;
@@ -152,7 +162,7 @@ body {
             }
 
             .bar {
-                background-color: #3A3B73;
+                background-color: $element;
                 width: inherit;
                 height: 4px;
                 margin-bottom: 6px;

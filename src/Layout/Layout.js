@@ -10,6 +10,12 @@ function Layout() {
     setMenuState(current => !current);
   };
 
+  const hideMenu = () => {
+    if(!menuHidden) {
+      setMenuState(true);
+    }
+  };
+
   return (
     <div>
       <div className={"sidebar" + (menuHidden ? ' hidden' : '')}>
@@ -52,7 +58,7 @@ function Layout() {
 
       </div>
 
-      <div className="main">
+      <div className={"main" + (menuHidden ? '' : ' hidden')} onClick={hideMenu}>
 
         <div className="menu-button" onClick={toggleMenu}>
           <div className="bar"></div>
