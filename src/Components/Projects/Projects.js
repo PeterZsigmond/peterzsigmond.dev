@@ -37,7 +37,7 @@ function Projects() {
                         return (
                               <div className="card" key={index}>
                                     <div className="image">
-                                          <img src={require("../img/projects/" + project.img + ".png")} alt={project.title} />
+                                          <img src={require("../../Images/projects/" + project.img + ".png")} alt={project.title} />
                                     </div>
                                     <h3>{project.title}</h3>
                                     <p>{project.desc}</p>

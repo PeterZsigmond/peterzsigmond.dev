@@ -49,7 +49,7 @@ function Layout() {
           </div>
         </div>
 
-        <img src={require("../img/github/github.png")}
+        <img src={require("../../Images/github/github.png")}
              alt="GitHub"
              className="github"
              onClick={() => 
