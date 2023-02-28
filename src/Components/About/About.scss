@@ -2,6 +2,8 @@ $white: #DDDDDD;
 $green: #3F9F4E;
 $element: #3A3B73;
 
+$selector-break: 520px;
+
 .hero {
     width: 910px;
     margin: 100px auto 70px auto;
@@ -81,8 +83,7 @@ $element: #3A3B73;
 
 .skills {
     margin: auto;
-    width: 910px;
-    height: 500px;
+    margin-bottom: 110px;
 
     .selector {
         width: 500px;
@@ -90,6 +91,10 @@ $element: #3A3B73;
         background-color: $element;
         border-radius: 50px;
         margin: auto;
+
+        @media (max-width: $selector-break) {
+            width: 390px;
+        }
 
         .left {
             width: 50%;
@@ -121,6 +126,10 @@ $element: #3A3B73;
             align-items: center;
             cursor: pointer;
 
+            @media (max-width: $selector-break) {
+                width: 185px;
+            }
+
             &:hover {
                 background-color: #303169;
             }
@@ -133,6 +142,10 @@ $element: #3A3B73;
                 font-size: 14px;
                 text-align: center;
                 margin-top: 2px;
+                
+                @media (max-width: $selector-break) {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -140,12 +153,17 @@ $element: #3A3B73;
     .elements {
         margin: auto;
         margin-top: 41px;
-        width: 658px;
+        max-width: 658px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 24px;
+        padding: 0px 20px;
+        
+        @media (max-width: $selector-break) {
+            gap: 14px;
+        }
 
         .element {
             background-color: #3A3B73;
