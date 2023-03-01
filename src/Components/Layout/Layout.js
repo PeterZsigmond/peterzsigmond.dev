@@ -20,28 +20,28 @@ function Layout() {
     <div>
       <div className={"sidebar" + (menuHidden ? ' hidden' : '')}>
         
-        <p className="title"><Link to="/">peterzsigmond.dev</Link></p>
+        <p className="title" onClick={hideMenu}><Link to="/">peterzsigmond.dev</Link></p>
         
         <div className="menu">
-          <div className="element about">
+          <div className="element about" onClick={hideMenu}>
             <NavLink to="/" className={({ isActive }) => isActive ? "active" : ''}>
               <i className="icon bi-person"></i>
               <p>About</p>
             </NavLink>
           </div>
-          <div className="element">
+          <div className="element" onClick={hideMenu}>
             <NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ''}>
               <i className="icon bi-ui-checks"></i>
               <p>Projects</p>
             </NavLink>
           </div>
-          <div className="element">
+          <div className="element" onClick={hideMenu}>
             <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ''}>
               <i className="icon bi-envelope"></i>
               <p>Contact</p>
             </NavLink>
           </div>
-          <div className="element">
+          <div className="element" onClick={hideMenu}>
             <NavLink to="/cheatsheet" className={({ isActive }) => isActive ? "active" : ''}>
               <i className="icon bi-file-code"></i>
               <p>Cheatsheet</p>
