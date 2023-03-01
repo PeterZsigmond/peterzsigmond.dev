@@ -2,16 +2,36 @@ $white: #DDDDDD;
 $green: #3F9F4E;
 $element: #3A3B73;
 
+$hero-break-1: 930px;
+$hero-break-2: 570px;
+$hero-break-3: 450px;
 $selector-break: 520px;
 
 .hero {
-    width: 910px;
     margin: 100px auto 70px auto;
     height: 320px;
+    display: flex;
+    justify-content: center;
+    
+    @media (max-width: $hero-break-1) {
+        padding: 0px 15px;
+    }
+
+    @media (max-width: $hero-break-2) {
+        height: 230px;
+        margin-bottom: 30px;
+    }
 
     .left {
-        width: 640px;
-        float: left;
+        padding-right: 60px;
+        
+        @media (max-width: 660px) {
+            padding-right: 30px;
+        }
+
+        @media (max-width: 500px) {
+            padding-right: 10px;
+        }
 
         h1 {
             margin: 0px;
@@ -19,6 +39,21 @@ $selector-break: 520px;
             font-size: 60px;
             color: $green;
             line-height: 56px;
+
+            @media (max-width: $hero-break-1) {
+                font-size: 35px;
+                line-height: 35px;
+            }
+            
+            @media (max-width: $hero-break-2) {
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            @media (max-width: $hero-break-2) {
+                font-size: 25px;
+                line-height: 25px;
+            }
 
             span {
                 background: linear-gradient(90deg, #4FB09F -2.79%, #4799A6 -2.79%, #4289AA -2.79%, #7A31D8 105.32%);
@@ -34,10 +69,34 @@ $selector-break: 520px;
             font-size: 42px;
             margin-top: 15px;
             margin-bottom: 15px;
+
+            @media (max-width: $hero-break-1) {
+                font-size: 26px;
+            }
+            
+            @media (max-width: $hero-break-2) {
+                font-size: 26px;
+            }
+
+            @media (max-width: $hero-break-2) {
+                font-size: 24px;
+            }
         }
 
         p {
             font-size: 19px;
+
+            @media (max-width: $hero-break-1) {
+                font-size: 16px;
+            }
+            
+            @media (max-width: $hero-break-2) {
+                font-size: 16px;
+            }
+
+            @media (max-width: $hero-break-2) {
+                font-size: 14px;
+            }
         }
 
         button {
@@ -52,13 +111,16 @@ $selector-break: 520px;
             font-family: Proxima-Nova;
             cursor: pointer;
             color: $white;
+            
+            @media (max-width: $hero-break-2) {
+                width: 180px;
+                height: 32px;
+                font-size: 12px;
+            }
         }
     }
 
     .right {
-        float: right;
-        width: 270px;
-
         .circle {
             background-color: #3A3B73;
             width: 233px;
@@ -66,6 +128,16 @@ $selector-break: 520px;
             border-radius: 50%;
             overflow: hidden;
             position: relative;
+
+            @media (max-width: $hero-break-1) {
+                width: 150px;
+                height: 150px;
+            }
+
+            @media (max-width: $hero-break-2) {
+                width: 100px;
+                height: 100px;
+            }
             
             img {
                 height: 220px;
@@ -76,6 +148,16 @@ $selector-break: 520px;
                 left: 0;
                 right: 0;
                 bottom: 0;
+
+                @media (max-width: $hero-break-1) {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                @media (max-width: $hero-break-2) {
+                    width: 100px;
+                    height: 100px;
+                }
             }
         }
     }
