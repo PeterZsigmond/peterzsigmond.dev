@@ -1,6 +1,5 @@
 @import '~bootstrap-icons/font/bootstrap-icons';
 
-$main: #191A42;
 $sidebar: #20214D;
 $white: #DDDDDD;
 $footer: #2A2B5C;
@@ -128,7 +127,7 @@ body {
     }
 
     .main {
-        background-color: $main;
+        background: radial-gradient(50% 50% at 70% 35%, #2C2E62 0%, #191A42 100%);
         width: calc(100% - $sidebar-width);
         min-height: 100vh;
         position: relative;
