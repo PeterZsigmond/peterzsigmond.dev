@@ -175,7 +175,7 @@ $selector-break: 520px;
         margin: auto;
 
         @media (max-width: $selector-break) {
-            width: 390px;
+            width: 360px;
         }
 
         .left {
@@ -209,7 +209,7 @@ $selector-break: 520px;
             cursor: pointer;
 
             @media (max-width: $selector-break) {
-                width: 185px;
+                width: 170px;
             }
 
             &:hover {
@@ -226,7 +226,7 @@ $selector-break: 520px;
                 margin-top: 2px;
                 
                 @media (max-width: $selector-break) {
-                    font-size: 12px;
+                    font-size: 11px;
                 }
             }
         }
@@ -244,7 +244,7 @@ $selector-break: 520px;
         padding: 0px 20px;
         
         @media (max-width: $selector-break) {
-            gap: 14px;
+            gap: 12px;
         }
 
         .element {
@@ -253,6 +253,11 @@ $selector-break: 520px;
             height: 120px;
             width: 112px;
             padding-top: 1px;
+
+            @media (max-width: $hero-break-2) {
+                height: 110px;
+                width: 100px;
+            }
 
             img {
                 height: 35px;

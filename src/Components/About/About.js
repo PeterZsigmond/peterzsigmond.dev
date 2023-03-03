@@ -8,11 +8,11 @@ function About() {
     [
       {name: 'VS Code', img: 'vs-code'},
       {name: 'Git', img: 'git'},
-      {name: 'AWS', img: 'aws'},
-      {name: 'Adobe Photoshop', img: 'photoshop'},
+      {name: 'Photoshop', img: 'photoshop'},
       {name: 'Figma', img: 'figma'},
       {name: 'Docker', img: 'docker'},
-      {name: 'Kubernetes', img: 'kubernetes'}
+      {name: 'Kubernetes', img: 'kubernetes'},
+      {name: 'AWS', img: 'aws'}
     ],
     [
       {name: 'Assembly', img: 'asm'},
