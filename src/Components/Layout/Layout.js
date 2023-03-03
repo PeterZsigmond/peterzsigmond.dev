@@ -4,6 +4,8 @@ import './Layout.scss';
 
 function Layout() {
 
+  const version = "0.0.1";
+
   const [menuHidden, setMenuState] = useState(true);
 
   const toggleMenu = () => {
@@ -69,8 +71,8 @@ function Layout() {
         <Outlet />
 
         <footer>
-          <p className="copyright">Peter Zsigmond, 2023</p>
-          <p className="version">(v0.0.1)</p>
+          <p className="copyright">Peter Zsigmond</p>
+          <p className="version">(v{version})</p>
         </footer>
 
       </div>

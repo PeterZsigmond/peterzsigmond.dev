@@ -177,7 +177,7 @@ body {
         }
 
         footer {
-            height: 45px;
+            height: 50px;
             background-color: $footer;
             border-radius: 10px;
             position: absolute;
@@ -187,16 +187,13 @@ body {
             .copyright {
                 text-align: center;
                 margin: 0;
-                position: relative;
-                top: 14px;
+                margin-top: 14px;
             }
-
+            
             .version {
+                text-align: center;
                 color: grey;
-                position: absolute;
-                right: 5px;
-                bottom: 5px;
-                margin: 0;
+                margin: 5px 0px 0px 0px;
                 font-size: 11px;
             }
         }
