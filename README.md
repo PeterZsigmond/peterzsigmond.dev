@@ -1,10 +1,23 @@
- # Website at peterzsigmond.dev
+# peterzsigmond.dev
 
-### Run locally
+This is my personal portfolio webpage. It was made in React.
+The website is at: https://dev.zsigmondpeter.hu
+
+## Run
+#### With Docker:
+```bash
+docker run --name peterzsigmond.dev -d -p 80:80 peterzsigmond/peterzsigmond.dev
+```
+
+#### Or locally:
+```bash
 npm install
 npm start
+```
 
-### Build
-npm install
+## Build
+```bash
+npm update
 npm run build
-docker build -t peterzsigmond-dev .
+docker build -t peterzsigmond/peterzsigmond.dev:<x.x.x> -t peterzsigmond/peterzsigmond.dev:latest .
+```
