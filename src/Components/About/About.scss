@@ -5,11 +5,10 @@ $element: #3A3B73;
 $hero-break-1: 930px;
 $hero-break-2: 570px;
 $hero-break-3: 450px;
-$selector-break: 520px;
+$selector-break: 530px;
 
 .hero {
-    margin: 100px auto 70px auto;
-    height: 320px;
+    margin: 90px auto 80px auto;
     display: flex;
     justify-content: center;
     
@@ -18,8 +17,7 @@ $selector-break: 520px;
     }
 
     @media (max-width: $hero-break-2) {
-        height: 230px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     .left {
@@ -33,13 +31,18 @@ $selector-break: 520px;
             padding-right: 10px;
         }
 
+        @media (max-width: 370px) {
+            padding-right: 0px;
+        }
+
         h1 {
-            margin: 0px;
+            margin-top: 0px;
+            margin-bottom: 15px;
             font-weight: bold;
             font-size: 60px;
             color: $green;
             line-height: 56px;
-
+            
             @media (max-width: $hero-break-1) {
                 font-size: 35px;
                 line-height: 35px;
@@ -48,13 +51,14 @@ $selector-break: 520px;
             @media (max-width: $hero-break-2) {
                 font-size: 30px;
                 line-height: 30px;
+                margin-bottom: 10px;
             }
-
+            
             @media (max-width: $hero-break-2) {
-                font-size: 25px;
-                line-height: 25px;
+                font-size: 26px;
+                line-height: 26px;
             }
-
+            
             span {
                 background: linear-gradient(90deg, #4FB09F -2.79%, #4799A6 -2.79%, #4289AA -2.79%, #7A31D8 105.32%);
                 -webkit-background-clip: text;
@@ -63,21 +67,22 @@ $selector-break: 520px;
                 text-fill-color: transparent;
             }
         }
-
+        
         h2 {
             font-weight: normal;
             font-size: 42px;
-            margin-top: 15px;
             margin-bottom: 15px;
-
+            margin-top: 0px;
+            
             @media (max-width: $hero-break-1) {
                 font-size: 26px;
             }
             
             @media (max-width: $hero-break-2) {
                 font-size: 26px;
+                margin-bottom: 10px;
             }
-
+            
             @media (max-width: $hero-break-2) {
                 font-size: 24px;
             }
@@ -85,24 +90,21 @@ $selector-break: 520px;
 
         p {
             font-size: 19px;
+            margin-bottom: 20px;
 
             @media (max-width: $hero-break-1) {
                 font-size: 16px;
             }
-            
-            @media (max-width: $hero-break-2) {
-                font-size: 16px;
-            }
 
             @media (max-width: $hero-break-2) {
-                font-size: 14px;
+                font-size: 15px;
+                margin-bottom: 15px;
             }
         }
 
         button {
             width: 231px;
             height: 42px;
-            margin-top: 25px;
             border-radius: 8px;
             background: linear-gradient(60deg, #7A31D8 0%, rgba(61, 130, 118, 0.72) 100%);
             font-size: 16px;
@@ -115,7 +117,7 @@ $selector-break: 520px;
             @media (max-width: $hero-break-2) {
                 width: 180px;
                 height: 32px;
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     }
@@ -135,8 +137,8 @@ $selector-break: 520px;
             }
 
             @media (max-width: $hero-break-2) {
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
             }
             
             img {
@@ -155,8 +157,8 @@ $selector-break: 520px;
                 }
 
                 @media (max-width: $hero-break-2) {
-                    width: 100px;
-                    height: 100px;
+                    width: 90px;
+                    height: 90px;
                 }
             }
         }
@@ -164,53 +166,52 @@ $selector-break: 520px;
 }
 
 .skills {
-    margin: auto;
-    margin-bottom: 110px;
+    margin: auto 15px 110px 15px;
 
     .selector {
-        width: 500px;
+        max-width: 500px;
         height: 73px;
         background-color: $element;
         border-radius: 50px;
         margin: auto;
-
+        box-sizing: border-box;
+        padding: 6px 0px;
+        margin-bottom: 30px;
+        
         @media (max-width: $selector-break) {
-            width: 360px;
+            max-width: 360px;
+            height: 60px;
+            margin-bottom: 20px;
         }
 
         .left {
             width: 50%;
-            height: inherit;
+            height: 100%;
             float: left;
 
             .box {
                 margin-left: 7px;
+                margin-right: 3px;
             }
         }
 
         .right {
             width: 50%;
-            height: inherit;
+            height: 100%;
             float: right;
 
             .box {
-                margin-left: 3px;
+                margin-right: 7px;
             }
         }
 
         .box {
-            margin-top: 7px;
-            height: 59px;
+            height: inherit;
             border-radius: 50px;
-            width: 240px;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-
-            @media (max-width: $selector-break) {
-                width: 170px;
-            }
 
             &:hover {
                 background-color: #303169;
@@ -234,14 +235,12 @@ $selector-break: 520px;
 
     .elements {
         margin: auto;
-        margin-top: 41px;
         max-width: 658px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
-        padding: 0px 20px;
+        gap: 20px;
         
         @media (max-width: $selector-break) {
             gap: 12px;
@@ -272,6 +271,10 @@ $selector-break: 520px;
                 font-weight: bold;
                 text-align: center;
                 font-size: 16px;
+                
+                @media (max-width: $hero-break-2) {
+                    font-size: 14px;
+                }
             }
         }
     }
