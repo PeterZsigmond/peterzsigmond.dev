@@ -23,7 +23,7 @@ function About() {
       {name: 'PHP', img: 'php'},
       {name: 'JavaScript', img: 'js'},
       {name: 'Python', img: 'python'},
-      {name: 'SQL', img: 'sql'}
+      {name: 'SQL*', img: 'sql'}
     ]
   ];
   
