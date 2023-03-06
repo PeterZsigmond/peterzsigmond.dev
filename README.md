@@ -1,6 +1,6 @@
 # peterzsigmond.dev
 
-This is my personal portfolio webpage. It was made in React.
+This is my personal portfolio webpage. It was made in React.<br>
 The website is at: https://dev.zsigmondpeter.hu
 
 ## Run
