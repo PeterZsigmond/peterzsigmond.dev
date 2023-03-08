@@ -1,4 +1,4 @@
-FROM nginx:1.23.3
+FROM httpd:2.4.56
 
-WORKDIR /usr/share/nginx/html/
+WORKDIR /usr/local/apache2/htdocs/
 COPY build/ .
