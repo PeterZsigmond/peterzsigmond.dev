@@ -1,7 +1,7 @@
 # peterzsigmond.dev
 
-This is my personal portfolio website. It was made in React.<br>
-The website is at: https://dev.zsigmondpeter.hu
+This is my personal portfolio website. I made it in React, and used other tools like Sass and Docker.<br><br>
+Live version: https://dev.zsigmondpeter.hu
 
 ## Run
 #### With Docker:
