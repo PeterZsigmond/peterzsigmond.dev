@@ -254,6 +254,10 @@ $selector-break: 530px;
         @media (max-width: $selector-break) {
             gap: 12px;
         }
+        
+        @media (max-width: $hero-break-4) {
+            gap: 11px;
+        }
 
         .element {
             background-color: #3A3B73;
@@ -263,8 +267,13 @@ $selector-break: 530px;
             padding-top: 1px;
 
             @media (max-width: $hero-break-2) {
-                height: 110px;
+                height: 107px;
                 width: 100px;
+            }
+
+            @media (max-width: $hero-break-4) {
+                height: 94px;
+                width: 88px;
             }
 
             img {
@@ -273,6 +282,11 @@ $selector-break: 530px;
                 display: block;
                 margin: auto;
                 margin-top: 19px;
+                
+                @media (max-width: $hero-break-2) {
+                    height: 30px;
+                    width: 30px;
+                }
             }
 
             p {
@@ -283,6 +297,10 @@ $selector-break: 530px;
                 
                 @media (max-width: $hero-break-2) {
                     font-size: 14px;
+                }
+
+                @media (max-width: $hero-break-3) {
+                    font-size: 13px;
                 }
             }
         }
