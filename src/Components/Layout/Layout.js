@@ -4,7 +4,7 @@ import './Layout.scss';
 
 function Layout() {
 
-  const version = "0.1.1";
+  const version = "0.1.2";
 
   const [menuHidden, setMenuState] = useState(true);
 
