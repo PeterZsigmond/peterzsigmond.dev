@@ -4,7 +4,7 @@ import './Layout.scss';
 
 function Layout() {
 
-  const version = "0.1.1";
+  const version = "0.1.2";
 
   const [menuHidden, setMenuState] = useState(true);
 
@@ -33,7 +33,7 @@ function Layout() {
           </div>
           <div className="element" onClick={hideMenu}>
             <NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ''}>
-              <i className="icon bi-ui-checks"></i>
+              <i className="icon bi-check2-square"></i>
               <p>Projects</p>
             </NavLink>
           </div>

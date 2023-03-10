@@ -2,7 +2,7 @@ import './Contact.scss';
 
 function Contact() {
     return (
-          <div className="container">
+          <div className="contact-page">
             <h1>Contact</h1>
             <div className="contact">
               <h2>Peter Zsigmond</h2>

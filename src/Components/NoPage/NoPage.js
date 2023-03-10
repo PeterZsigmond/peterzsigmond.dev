@@ -1,6 +1,10 @@
+import './NoPage.scss';
+
 function NoPage() {
     return (
-          <div><p>This page is not found!</p></div>
+          <div className="nopage">
+            <h3>This page is not found!</h3>
+          </div>
     );
   }
   
