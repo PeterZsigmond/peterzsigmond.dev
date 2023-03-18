@@ -1,12 +1,115 @@
+@font-face {
+    font-family: SourceCodePro;
+    src: url(../../Fonts/sourcecodepro-regular.ttf);
+}
+
 .cheatsheet {
-    text-align: center;
     margin-top: 80px;
+    margin-bottom: 100px;
 
     @media (max-width: 690px) {
         margin-top: 47px;
     }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .content {
+        margin: auto;
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
 
-    .come-soon {
-        margin-top: 50px;
+        @media (max-width: 690px) {
+            margin-top: 50px;
+        }
+
+        .categories {
+            background-color: #2A2B5C;
+            min-width: 280px;
+
+            .category {
+                padding: 10px;
+                background-color: #191a3d;
+                margin: 5px 5px 3px 5px;
+
+                .name {
+                    margin-bottom: 10px;
+                    display: flex;
+                    
+                    .circle {
+                        background-color: #3A3B73;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        
+                        img {
+                            width: 20px;
+                            margin-top: 2px;
+                            margin-left: 2px;
+                        }
+                    }
+                    
+                    p {
+                        font-size: 18px;
+                        margin-left: 8px;
+                        margin-top: 3px;
+                    }
+                }
+                
+                .topic {
+                    text-align: center;
+                    margin-bottom: 3px;
+                    padding: 6px 0px;
+                    font-size: 15px;
+                    cursor: pointer;
+                    background-color: #20214D;
+
+                    &:hover {
+                        background-color: #121330;
+                    }
+
+                    &.active {
+                        background-color: #121330;
+                    }
+
+                }
+            }
+        }
+        
+        .selected-topic {
+            background-color: #20214D;
+            min-width: 600px;
+            padding: 20px 40px 20px 25px;
+            box-sizing: border-box;
+
+            .name {
+                margin: 0px 0px 30px 0px;
+                font-size: 25px;
+            }
+
+            .title {
+                margin: 0px 0px 10px 0px;
+                font-size: 20px;
+                font-weight: normal;
+            }
+
+            .code {
+                font-family: SourceCodePro;
+                background-color: #12122f;
+                color: #3F9F4E;
+                font-size: 13px;
+                margin-bottom: 10px;
+                padding: 5px;
+                white-space: pre-line;
+            }
+
+            .desc {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+        }
     }
 }

@@ -19,12 +19,18 @@ function Cheatsheet() {
 						return (
 							<div className="category" key={index_0}>
 								<div className="name">
-									<img src={require("../../Images/cheatsheets/" + category.img + ".png")} alt={category.category} />
+									<div className="circle">
+										<img src={require("../../Images/cheatsheets/" + category.img + ".png")} alt={category.category} />
+									</div>
 									<p>{category.category}</p>
 								</div>
 								{category.topics.map((topic, index_1) => {
 									return (
-										<p className="topic" key={index_1} onClick={() => setSelected([index_0, index_1])}>{topic.name}</p>
+										<p className={"topic" + ((index_0 === selected[0] && index_1 === selected[1]) ? ' active' : '')}
+											key={index_1}
+											onClick={() => setSelected([index_0, index_1])}>
+												{topic.name}
+										</p>
 									);
 								})}
 							</div>
