@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import parse from 'html-react-parser';
 import { cheatsheets } from "./CheatSheets";
 import './Cheatsheet.scss';
@@ -7,6 +7,8 @@ function Cheatsheet() {
 
 	const [selected, setSelected] = useState([0, 0]);
 	let selectedTopic = cheatsheets[selected[0]].topics[selected[1]];
+
+	const selectedTopicRef = useRef();
 
     return (
 		<div className="cheatsheet">
@@ -28,8 +30,12 @@ function Cheatsheet() {
 									return (
 										<p className={"topic" + ((index_0 === selected[0] && index_1 === selected[1]) ? ' active' : '')}
 											key={index_1}
-											onClick={() => setSelected([index_0, index_1])}>
-												{topic.name}
+											onClick={() => {
+												setSelected([index_0, index_1]);
+												selectedTopicRef.current.scrollIntoView();
+											}
+										}>
+											{topic.name}
 										</p>
 									);
 								})}
@@ -38,7 +44,7 @@ function Cheatsheet() {
 					})}
 				</div>
 
-				<div className="selected-topic">
+				<div ref={selectedTopicRef} className="selected-topic">
 					<h3 className="name">{selectedTopic.name}</h3>
 					{selectedTopic.cheats.map((cheat, index) => {
 						return (
