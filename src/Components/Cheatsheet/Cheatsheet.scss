@@ -1,3 +1,6 @@
+$content-break: 958px;
+$mobile-size: 425px;
+
 @font-face {
     font-family: SourceCodePro;
     src: url(../../Fonts/sourcecodepro-regular.ttf);
@@ -5,7 +8,7 @@
 
 .cheatsheet {
     margin-top: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 
     @media (max-width: 690px) {
         margin-top: 47px;
@@ -16,9 +19,9 @@
     }
     
     .content {
-        margin: auto;
-        margin-top: 70px;
+        margin: 70px 15px 0px 15px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
 
         @media (max-width: 690px) {
@@ -26,13 +29,30 @@
         }
 
         .categories {
+            width: 280px;
             background-color: #2A2B5C;
-            min-width: 280px;
-
+            border-radius: 7px;
+            padding: 10px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            
+            @media (max-width: $content-break) {
+                width: 350px;
+            }
+            
+            @media (max-width: $mobile-size) {
+                width: 100%;
+            }
+            
             .category {
                 padding: 10px;
                 background-color: #191a3d;
-                margin: 5px 5px 3px 5px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
 
                 .name {
                     margin-bottom: 10px;
@@ -66,25 +86,28 @@
                     font-size: 15px;
                     cursor: pointer;
                     background-color: #20214D;
+                    border-radius: 5px;
 
                     &:hover {
-                        background-color: #121330;
+                        background-color: #32346f;
                     }
 
                     &.active {
-                        background-color: #121330;
+                        background-color: #32346f;
+                        text-decoration: underline;
                     }
-
                 }
             }
         }
         
         .selected-topic {
             background-color: #20214D;
-            min-width: 600px;
-            padding: 20px 40px 20px 25px;
+            flex-basis: 649px;
+            padding: 25px;
             box-sizing: border-box;
-
+            border-radius: 7px;
+            margin-bottom: 30px;
+            
             .name {
                 margin: 0px 0px 30px 0px;
                 font-size: 25px;
@@ -97,13 +120,15 @@
             }
 
             .code {
+                width: fit-content;
                 font-family: SourceCodePro;
                 background-color: #12122f;
                 color: #3F9F4E;
                 font-size: 13px;
                 margin-bottom: 10px;
-                padding: 5px;
+                padding: 8px 30px 8px 12px;
                 white-space: pre-line;
+                border-radius: 5px;
             }
 
             .desc {
