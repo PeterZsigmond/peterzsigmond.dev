@@ -183,9 +183,10 @@ export const cheatsheets = [{
             },
             {
                 name: 'Run',
-                code: 'docker run -d -p <i>80:80</i> --name <i>container-name</i> --restart always <i>image-name</i>',
+                code: 'docker run -d -p <i>80:80</i> -v <i>volume-name</i>:<i>/dir</i> --name <i>container-name</i> --restart always <i>image-name</i>',
                 desc: '-d: detached<br>' +
-                    '-p <i>outside-port:inside-port</i>'
+                    '-p <i>outside-port:inside-port</i><br>' +
+                    '-v: volume'
             },
             {
                 name: 'Show images',
@@ -206,6 +207,14 @@ export const cheatsheets = [{
             {
                 name: 'Push',
                 code: 'docker push <i>image-name</i>',
+                desc: ''
+            },
+            {
+                name: 'Volumes',
+                code: 'docker volume create <i>name</i><br>' +
+                    'docker volume ls<br>' +
+                    'docker volume inspect <i>name</i><br>' +
+                    'docker volume rm <i>name</i>',
                 desc: ''
             },
             {
