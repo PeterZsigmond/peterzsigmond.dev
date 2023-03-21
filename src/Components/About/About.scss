@@ -127,11 +127,13 @@ $selector-break: 530px;
             font-family: Proxima-Nova;
             cursor: pointer;
             color: $white;
+            padding-top: 2px;
             
             @media (max-width: $hero-break-2) {
                 width: 180px;
                 height: 32px;
                 font-size: 14px;
+                padding-top: 0px;
             }
         }
     }
