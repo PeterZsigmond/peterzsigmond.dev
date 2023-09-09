@@ -1,6 +1,6 @@
 export const cheatsheets = [{
-        category: 'Linux',
-        img: 'linux',
+        category: 'Shell',
+        img: 'shell',
         topics: [{
             name: 'Split',
             cheats: [{
