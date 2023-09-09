@@ -45,10 +45,12 @@ function Cheatsheet() {
 				</div>
 
 				<div ref={selectedTopicRef} className="selected-topic">
-					<h3 className="name">{selectedTopic.name}</h3>
+					<div className="name">
+						<h3>{selectedTopic.name}</h3>
+					</div>
 					{selectedTopic.cheats.map((cheat, index) => {
 						return (
-							<div key={index}>
+							<div key={index} className="cheat">
 								<h4 className="title">{cheat.name}</h4>
 								<p className="code">{parse(cheat.code)}</p>
 								<p className="desc">{parse(cheat.desc)}</p>
