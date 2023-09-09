@@ -237,6 +237,16 @@ export const cheatsheets = [{
                     '-e PMA_ARBITRARY=1: Use arbitrary servers<br>' +
                     '--rm: Remove the container when it exits'
             }]
+        },
+        {
+            name: 'qBittorrent',
+            cheats: [{
+                name: 'Run it containerized',
+                code: 'docker run -d -p 8080:8080 -p 6881:6881/tcp -p 6881:6881/udp -v <i>./downloads</i>:/downloads wernight/qbittorrent',
+                desc: '-d: detached<br>' +
+                    '-v: volume<br>' +
+                    'username: admin, password: adminadmin'
+            }]
         }]
     },
     {
