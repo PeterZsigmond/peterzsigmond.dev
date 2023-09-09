@@ -233,9 +233,9 @@ export const cheatsheets = [{
         category: 'JavaScript',
         img: 'js',
         topics: [{
-            name: 'React',
+            name: 'Node.js, npm',
             cheats: [{
-                name: 'Install Node.js',
+                name: 'Install Node.js with Homebrew',
                 code: 'brew install node',
                 desc: ''
             },
@@ -247,37 +247,71 @@ export const cheatsheets = [{
             },
             {
                 name: 'Upgrade npm',
-                code: 'npm install -g npm@latest',
+                code: 'npm i -g npm@latest',
                 desc: ''
             },
             {
+                name: 'List installed packages',
+                code: 'npm ls<br>' +
+                    'npm ls -g',
+                desc: '-g: global'
+            },
+            {
+                name: 'Install a package',
+                code: 'npm i<br>' +
+                    'npm i <i>package</i><br>' +
+                    'npm i -g <i>package</i>',
+                desc: 'no arg: from package.json<br>' +
+                    '-g: global'
+            },
+            {
+                name: 'Remove a package',
+                code: 'npm rm <i>package</i><br>' +
+                    'npm rm -g <i>package</i>',
+                desc: '-g: global'
+            },
+            {
+                name: 'Update packages',
+                code: 'npm update',
+                desc: '^: latest minor version<br>' +
+                    '~: latest patch version<br>' +
+                    '--save: update values in package.json<br>' +
+                    '-g: global'
+            }]
+        },
+        {
+            name: 'React (Create React App)',
+            cheats: [{
                 name: 'Create React App',
-                code: 'npx create-next-app',
+                code: 'npx create-react-app@latest my-app',
                 desc: ''
             },
             {
                 name: 'Run local server',
-                code: 'npm start',
+                code: 'npm run start',
                 desc: ''
             },
             {
                 name: 'Build',
                 code: 'npm run build',
                 desc: ''
-            },
-            {
-                name: 'Install dependencies from package.json',
-                code: 'npm install',
+            }]
+        },
+        {
+            name: 'React (Next.js)',
+            cheats: [{
+                name: 'Create a Next.js App',
+                code: 'npx create-next-app@latest',
                 desc: ''
             },
             {
-                name: 'Update dependencies',
-                code: 'npm update',
+                name: 'Run local server',
+                code: 'npm run dev',
                 desc: ''
             },
             {
-                name: 'List dependencies',
-                code: 'npm list',
+                name: 'Build',
+                code: 'npm run build',
                 desc: ''
             }]
         }]
