@@ -227,6 +227,16 @@ export const cheatsheets = [{
                 code: 'docker scan <i>image-name</i>',
                 desc: ''
             }]
+        },
+        {
+            name: 'PhpMyAdmin',
+            cheats: [{
+                name: 'Run it containerized',
+                code: 'docker run -d -p <i>8080:80</i> -e PMA_ARBITRARY=1 --rm --name <i>phpmyadmin</i> phpmyadmin',
+                desc: '-d: detached<br>' +
+                    '-e PMA_ARBITRARY=1: Use arbitrary servers<br>' +
+                    '--rm: Remove the container when it exits'
+            }]
         }]
     },
     {
@@ -313,20 +323,6 @@ export const cheatsheets = [{
                 name: 'Build',
                 code: 'npm run build',
                 desc: ''
-            }]
-        }]
-    },
-    {
-        category: 'SQL',
-        img: 'sql',
-        topics: [{
-            name: 'PhpMyAdmin',
-            cheats: [{
-                name: 'Run it containerized',
-                code: 'docker run -d -p <i>8080:80</i> -e PMA_ARBITRARY=1 --rm --name <i>phpmyadmin</i> phpmyadmin',
-                desc: '-d: detached<br>' +
-                    '-e PMA_ARBITRARY=1: Use arbitrary servers<br>' +
-                    '--rm: Remove the container when it exits'
             }]
         }]
     }
