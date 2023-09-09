@@ -181,6 +181,112 @@ export const cheatsheets = [{
                     'count: number of blocks<br>' +
                     'Total file size: (bs * count)'
             }]
+        },
+        {
+            name: 'Git',
+            cheats: [{
+                name: 'Config',
+                code: 'git config --global user.name "<i>name</i>"<br>' +
+                    'git config --global user.email "<i>email</i>"',
+                desc: '--global: not just in working directory'
+            },
+            {
+                name: 'Initialize',
+                code: 'git init',
+                desc: 'Create an empty Git repository'
+            },
+            {
+                name: 'Clone',
+                code: 'git clone <i>URL</i>',
+                desc: ''
+            },
+            {
+                name: 'Status',
+                code: 'git status',
+                desc: ''
+            },
+            {
+                name: 'Add file',
+                code: 'git add <i>file</i>',
+                desc: ''
+            },
+            {
+                name: 'Unstage, while retaining changes in working directory',
+                code: 'git reset <i>file</i>',
+                desc: ''
+            },
+            {
+                name: 'Undo unstaged changes',
+                code: 'git restore <i>file</i>',
+                desc: 'Will undo an unstaged file to the last committed version'
+            },
+            {
+                name: 'Commit',
+                code: 'git commit -m "<i>message</i>"',
+                desc: ''
+            },
+            {
+                name: 'List branches',
+                code: 'git branch',
+                desc: ''
+            },
+            {
+                name: 'Create a new branch',
+                code: 'git branch <i>name</i>',
+                desc: ''
+            },
+            {
+                name: 'Switch to another branch',
+                code: 'git checkout <i>branch</i>',
+                desc: '-b <i>name</i>: create a new branch'
+            },
+            {
+                name: 'Merge',
+                code: 'git merge <i>branch</i>',
+                desc: 'Merge specified branch into the current one'
+            },
+            {
+                name: 'Show all commits',
+                code: 'git log<br>' +
+                    'git log --graph --all --oneline',
+                desc: ''
+            },
+            {
+                name: 'Add remote URL as an alias',
+                code: 'git remote add <i>alias</i> <i>URL</i>',
+                desc: ''
+            },
+            {
+                name: 'Fetch down all branches',
+                code: 'git fetch',
+                desc: ''
+            },
+            {
+                name: 'Merge remote branch into your current branch',
+                code: 'git merge <i>alias</i>/<i>branch</i>',
+                desc: ''
+            },
+            {
+                name: 'Push to remote repository',
+                code: 'git push <i>alias</i> <i>branch</i>',
+                desc: ''
+            },
+            {
+                name: 'Fetch and merge commits from remote branch',
+                code: 'git pull',
+                desc: ''
+            },
+            {
+                name: 'Temporarily store modified, tracked files, to change branch',
+                code: 'git stash [push/pop/list/drop]',
+                desc: 'Pushes/pops from a stack'
+            },
+            {
+                name: 'Undo a commit',
+                code: 'git revert <i>commit</i>',
+                desc: 'Forward-moving undo existing commits<br>' +
+                    'Will create a new commit that inverses the changes'
+            }]
         }]
     },
     {
