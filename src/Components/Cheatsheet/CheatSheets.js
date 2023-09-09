@@ -169,6 +169,18 @@ export const cheatsheets = [{
                     'quit',
                 desc: ''
             }]
+        },
+        {
+            name: 'Random file generator',
+            cheats: [{
+                name: 'Generating a file of given size, with random bytes',
+                code: 'dd if=/dev/random of=<i>file</i> bs=<i>1M</i> count=<i>64</i>',
+                desc: 'if: input file<br>' +
+                    'of: output file<br>' +
+                    'bs: block size [K/M/G] (don\'t be too big, because memory will run out)<br>' +
+                    'count: number of blocks<br>' +
+                    'Total file size: (bs * count)'
+            }]
         }]
     },
     {
