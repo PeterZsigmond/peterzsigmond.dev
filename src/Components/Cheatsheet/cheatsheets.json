@@ -415,6 +415,26 @@
                             "Forward-moving undo existing commits",
                             "Will create a new commit that inverses the changes"
                         ]
+                    },
+                    {
+                        "name": "Go back to a previous commit",
+                        "codes": [
+                            "git checkout -b <i>name</i> <i>commit</i>"
+                        ],
+                        "descriptions": [
+                            "Creates a new branch, that points to the given commit"
+                        ]
+                    },
+                    {
+                        "name": "Delete a branch",
+                        "codes": [
+                            "git branch -d <i>branch</i>",
+                            "git push origin --delete <i>branch</i>"
+                        ],
+                        "descriptions": [
+                            "0: locally",
+                            "1: remotely"
+                        ]
                     }
                 ]
             }
