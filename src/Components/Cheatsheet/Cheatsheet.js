@@ -1,13 +1,11 @@
 import { useState, useRef } from 'react';
 import parse from 'html-react-parser';
-import { cheatsheets } from "./CheatSheets";
+import cheatsheets from './cheatsheets.json';
 import './Cheatsheet.scss';
 
 function Cheatsheet() {
 
-	const [selected, setSelected] = useState([0, 0]);
-	let selectedTopic = cheatsheets[selected[0]].topics[selected[1]];
-
+	const [selected, setSelected] = useState({ category: 0, topic: 0 });
 	const selectedTopicRef = useRef();
 
     return (
@@ -17,21 +15,23 @@ function Cheatsheet() {
 			<div className="content">
 
 				<div className="categories">
-					{cheatsheets.map((category, index_0) => {
+					
+					{cheatsheets.map((category, categoryIdx) => {
 						return (
-							<div className="category" key={index_0}>
+							<div className="category" key={categoryIdx}>
 								<div className="name">
 									<div className="circle">
-										<img src={require("../../Images/cheatsheets/" + category.img + ".png")} alt={category.category} />
+										<img src={ require("../../Images/cheatsheets/" + category.imgName + ".png") } alt={category.name} />
 									</div>
-									<p>{category.category}</p>
+									<p>{category.name}</p>
 								</div>
-								{category.topics.map((topic, index_1) => {
+								{category.topics.map((topic, topicIdx) => {
 									return (
-										<p className={"topic" + ((index_0 === selected[0] && index_1 === selected[1]) ? ' active' : '')}
-											key={index_1}
+										<p
+											className={"topic" + ((selected.category === categoryIdx && selected.topic === topicIdx) ? " active" : "")}
+											key={topicIdx}
 											onClick={() => {
-												setSelected([index_0, index_1]);
+												setSelected({ category: categoryIdx, topic: topicIdx });
 												selectedTopicRef.current.scrollIntoView();
 											}
 										}>
@@ -42,21 +42,37 @@ function Cheatsheet() {
 							</div>
 						);
 					})}
+
 				</div>
 
 				<div ref={selectedTopicRef} className="selected-topic">
+
 					<div className="name">
-						<h3>{selectedTopic.name}</h3>
+						<h3>{ cheatsheets[selected.category].topics[selected.topic].name }</h3>
 					</div>
-					{selectedTopic.cheats.map((cheat, index) => {
+
+					{cheatsheets[selected.category].topics[selected.topic].cheats.map((cheat, cheatIdx) => {
 						return (
-							<div key={index} className="cheat">
+							<div key={cheatIdx} className="cheat">
 								<h4 className="title">{cheat.name}</h4>
-								<p className="code">{parse(cheat.code)}</p>
-								<p className="desc">{parse(cheat.desc)}</p>
+								{cheat.codes?.map((code, codeIdx) => {
+									return (
+										<p key={codeIdx} className="code">
+											{parse(code)}
+										</p>
+									);
+								})}
+								{cheat.descriptions?.map((desc, descIdx) => {
+									return (
+										<p key={descIdx} className="desc">
+											{parse(desc)}
+										</p>
+									);
+								})}
 							</div>
 						);
 					})}
+
 				</div>
 
 			</div>
