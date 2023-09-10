@@ -608,41 +608,27 @@
                 ]
             },
             {
-                "name": "React (Create React App)",
+                "name": "React",
                 "cheats": [
                     {
-                        "name": "Create React App",
+                        "name": "Create a React App",
                         "codes": [
+                            "npx create-next-app@latest",
                             "npx create-react-app@latest my-app"
+                        ],
+                        "descriptions": [
+                            "0: Next.js (recommended)",
+                            "1: Create React App"
                         ]
                     },
                     {
                         "name": "Run local server",
                         "codes": [
-                            "npm run start"
-                        ]
-                    },
-                    {
-                        "name": "Build",
-                        "codes": [
-                            "npm run build"
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "React (Next.js)",
-                "cheats": [
-                    {
-                        "name": "Create a Next.js App",
-                        "codes": [
-                            "npx create-next-app@latest"
-                        ]
-                    },
-                    {
-                        "name": "Run local server",
-                        "codes": [
-                            "npm run dev"
+                            "npm run dev/start"
+                        ],
+                        "descriptions": [
+                            "dev: Next.js",
+                            "start: Create React App"
                         ]
                     },
                     {
