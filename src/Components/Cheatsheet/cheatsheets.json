@@ -148,14 +148,19 @@
                 "name": "Curl",
                 "cheats": [
                     {
-                        "name": "Transfer a URL",
+                        "name": "Transfer data to or from a server",
                         "codes": [
-                            "curl <i>Options URL</i>"
+                            "curl <i>Options URL</i>",
+                            "curl -X <i>POST</i> -H <i>'Content-Type: application/json'</i> -d <i>'{\"name\":\"value\"}'</i> <i>https://echo.zuplo.io</i>"
                         ],
                         "descriptions": [
-                            "-u <i>username</i>",
+                            "-u <i>username</i> (Basic auth, will ask for password)",
                             "-k: insecure (no SSL verification)",
                             "-o <i>output.txt</i>",
+                            "--head: response headers only",
+                            "-X <i>method</i>",
+                            "-H <i>header</i>",
+                            "-d <i>data</i>",
                             "-v: verbose"
                         ]
                     }
