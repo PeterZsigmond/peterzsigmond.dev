@@ -8,6 +8,11 @@ function Cheatsheet() {
 	const [selected, setSelected] = useState({ category: 0, topic: 0 });
 	const selectedTopicRef = useRef();
 
+	function handleCodeCopy(code) {
+		code = code.replaceAll('<i>', '').replaceAll('</i>', '');
+		navigator?.clipboard?.writeText(code);
+	}
+
     return (
 		<div className="cheatsheet">
 			<h1>Cheatsheet</h1>
@@ -57,9 +62,12 @@ function Cheatsheet() {
 								<h4 className="title">{cheat.name}</h4>
 								{cheat.codes?.map((code, codeIdx) => {
 									return (
-										<p key={codeIdx} className="code">
-											{parse(code)}
-										</p>
+										<div key={codeIdx} className="code">
+											<p>{parse(code)}</p>
+											<div onClick={() => handleCodeCopy(code)} className="copy">
+												<i className="bi bi-copy"></i>
+											</div>
+										</div>
 									);
 								})}
 								{cheat.descriptions?.map((desc, descIdx) => {

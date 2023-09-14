@@ -135,14 +135,40 @@ $mobile-size: 425px;
     
                 .code {
                     width: fit-content;
-                    font-family: SourceCodePro;
                     background-color: #12122f;
-                    color: #3F9F4E;
-                    font-size: 13px;
-                    margin-bottom: 8px;
-                    padding: 8px 30px 8px 12px;
-                    white-space: pre-line;
                     border-radius: 5px;
+                    margin-bottom: 8px;
+                    position: relative;
+
+                    p {
+                        font-family: SourceCodePro;
+                        color: #3F9F4E;
+                        font-size: 13px;
+                        padding: 8px 56px 8px 12px;
+                    }
+                    
+                    .copy {
+                        &:hover {
+                            background-color: #2e2f6d;
+                        }
+                        
+                        background-color: #222356;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 8px;
+                        padding-right: 12px;
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        border-radius: 0px 5px 5px 0px;
+                        height: 100%;
+
+                        i {
+                            color: #bbbbbb;
+                            font-size: 14px;
+                        }
+                    }
                 }
     
                 .desc {
