@@ -13,6 +13,13 @@ function Cheatsheet() {
 		navigator?.clipboard?.writeText(code);
 	}
 
+	function scrollToSelectedTopic() {
+		const contentWrapsAt = 973;
+		if(window.innerWidth <= contentWrapsAt) {
+			selectedTopicRef.current.scrollIntoView();
+		}
+	}
+
     return (
 		<div className="cheatsheet">
 			<h1>Cheatsheet</h1>
@@ -37,7 +44,7 @@ function Cheatsheet() {
 											key={topicIdx}
 											onClick={() => {
 												setSelected({ category: categoryIdx, topic: topicIdx });
-												selectedTopicRef.current.scrollIntoView();
+												scrollToSelectedTopic();
 											}
 										}>
 											{topic.name}
