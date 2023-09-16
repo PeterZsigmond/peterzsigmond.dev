@@ -193,7 +193,7 @@
                     },
                     {
                         "name": "Key bindings",
-                        "codes": [
+                        "descriptions": [
                             "Ctrl+a :quit Kill session",
                             "Ctrl+a c Create a new window (with shell)",
                             "Ctrl+a \" List all windows",
