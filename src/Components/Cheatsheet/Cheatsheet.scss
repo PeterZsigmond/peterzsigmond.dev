@@ -2,8 +2,8 @@ $content-break: 958px;
 $mobile-size: 425px;
 
 @font-face {
-    font-family: SourceCodePro;
-    src: url(../../Fonts/sourcecodepro-regular.ttf);
+    font-family: SFMono-Regular;
+    src: url(../../Fonts/sfmono-regular.woff);
 }
 
 .cheatsheet {
@@ -129,30 +129,37 @@ $mobile-size: 425px;
 
                 .title {
                     margin: 0px 0px 15px 0px;
-                    font-size: 20px;
+                    font-size: 18px;
                     font-weight: normal;
                 }
     
-                .code {
+                .codeBlock {
                     width: fit-content;
-                    background-color: #12122f;
+                    background-color: #17173c;
                     border-radius: 5px;
                     margin-bottom: 8px;
                     position: relative;
+                    border: 1px solid #49733e;
 
-                    p {
-                        font-family: SourceCodePro;
-                        color: #3F9F4E;
+                    .code {
+                        font-family: SFMono-Regular;
                         font-size: 13px;
-                        padding: 8px 56px 8px 12px;
+                        padding: 10px 56px 10px 12px;
+                        display: inline-block;
+
+                        span {
+                            margin-right: 10px;
+                            color: #808080;
+                        }
                     }
                     
                     .copy {
                         &:hover {
-                            background-color: #2e2f6d;
+                            i {
+                                color: #DDDDDD;
+                            }
                         }
                         
-                        background-color: #222356;
                         cursor: pointer;
                         display: flex;
                         align-items: center;
@@ -161,12 +168,11 @@ $mobile-size: 425px;
                         position: absolute;
                         top: 0px;
                         right: 0px;
-                        border-radius: 0px 5px 5px 0px;
                         height: 100%;
 
                         i {
-                            color: #bbbbbb;
-                            font-size: 14px;
+                            color: #808080;
+                            font-size: 13px;
                         }
                     }
                 }

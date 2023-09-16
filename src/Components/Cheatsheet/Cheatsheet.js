@@ -60,16 +60,21 @@ function Cheatsheet() {
 						return (
 							<div key={cheatIdx} className="cheat">
 								<h4 className="title">{cheat.name}</h4>
+
 								{cheat.codes?.map((code, codeIdx) => {
 									return (
-										<div key={codeIdx} className="code">
-											<p>{parse(code)}</p>
+										<div key={codeIdx} className="codeBlock">
+											<p className="code">
+												<span>$</span>
+												{parse(code)}
+											</p>
 											<div onClick={() => handleCodeCopy(code)} className="copy">
 												<i className="bi bi-copy"></i>
 											</div>
 										</div>
 									);
 								})}
+
 								{cheat.descriptions?.map((desc, descIdx) => {
 									return (
 										<p key={descIdx} className="desc">
