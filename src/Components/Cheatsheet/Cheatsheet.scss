@@ -108,6 +108,16 @@ $mobile-size: 425px;
             border-radius: 7px;
             margin-bottom: 30px;
 
+            .no-selected {
+                display: flex;
+                justify-content: center;
+                gap: 7px;
+
+                i {
+                    color: #d3d324;
+                }
+            }
+
             .name {
                 margin-bottom: 40px;
 

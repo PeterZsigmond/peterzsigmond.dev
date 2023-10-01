@@ -1,10 +1,12 @@
 [
     {
         "name": "Shell",
+        "url": "Shell",
         "imgName": "shell",
         "topics": [
             {
                 "name": "Split",
+                "url": "Split",
                 "cheats": [
                     {
                         "name": "Split a file into pieces",
@@ -30,6 +32,7 @@
             },
             {
                 "name": "GPG encrypt",
+                "url": "GPG-encrypt",
                 "cheats": [
                     {
                         "name": "Encrypt",
@@ -54,6 +57,7 @@
             },
             {
                 "name": "Find",
+                "url": "Find",
                 "cheats": [
                     {
                         "name": "Search for files in a directory hierarchy",
@@ -68,6 +72,7 @@
             },
             {
                 "name": "Disk Usage",
+                "url": "Disk-Usage",
                 "cheats": [
                     {
                         "name": "File system disk space usage",
@@ -92,6 +97,7 @@
             },
             {
                 "name": "Temperature",
+                "url": "Temperature",
                 "cheats": [
                     {
                         "name": "Monitor the temperatures, voltages, and fans",
@@ -104,6 +110,7 @@
             },
             {
                 "name": "Partitioning",
+                "url": "Partitioning",
                 "cheats": [
                     {
                         "name": "Print block device attributes",
@@ -146,6 +153,7 @@
             },
             {
                 "name": "Curl",
+                "url": "Curl",
                 "cheats": [
                     {
                         "name": "Transfer data to or from a server",
@@ -168,6 +176,7 @@
             },
             {
                 "name": "Net Speed Test",
+                "url": "Net-Speed-Test",
                 "cheats": [
                     {
                         "name": "Testing internet bandwidth",
@@ -180,6 +189,7 @@
             },
             {
                 "name": "Screen",
+                "url": "Screen",
                 "cheats": [
                     {
                         "name": "Start session",
@@ -212,6 +222,7 @@
             },
             {
                 "name": "Grep",
+                "url": "Grep",
                 "cheats": [
                     {
                         "name": "Search in files",
@@ -229,6 +240,7 @@
             },
             {
                 "name": "FTP client",
+                "url": "FTP-client",
                 "cheats": [
                     {
                         "name": "Install",
@@ -258,6 +270,7 @@
             },
             {
                 "name": "Random file generator",
+                "url": "Random-file-generator",
                 "cheats": [
                     {
                         "name": "Generating a file of given size, with random bytes",
@@ -276,6 +289,7 @@
             },
             {
                 "name": "Git",
+                "url": "Git",
                 "cheats": [
                     {
                         "name": "Config",
@@ -447,10 +461,12 @@
     },
     {
         "name": "Docker",
+        "url": "Docker",
         "imgName": "docker",
         "topics": [
             {
                 "name": "Commands",
+                "url": "Commands",
                 "cheats": [
                     {
                         "name": "Build",
@@ -528,6 +544,7 @@
             },
             {
                 "name": "PhpMyAdmin",
+                "url": "PhpMyAdmin",
                 "cheats": [
                     {
                         "name": "Run it containerized",
@@ -544,6 +561,7 @@
             },
             {
                 "name": "qBittorrent",
+                "url": "qBittorrent",
                 "cheats": [
                     {
                         "name": "Run it containerized",
@@ -562,10 +580,12 @@
     },
     {
         "name": "JavaScript",
+        "url": "JavaScript",
         "imgName": "js",
         "topics": [
             {
                 "name": "Node.js, npm",
+                "url": "Node-js-npm",
                 "cheats": [
                     {
                         "name": "Install Node.js with Homebrew",
@@ -634,6 +654,7 @@
             },
             {
                 "name": "React",
+                "url": "React",
                 "cheats": [
                     {
                         "name": "Create a React App",
