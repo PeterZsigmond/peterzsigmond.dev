@@ -1,4 +1,4 @@
-FROM httpd:2.4.56
+FROM httpd:2.4.57
 
 WORKDIR /usr/local/apache2/htdocs/
 
