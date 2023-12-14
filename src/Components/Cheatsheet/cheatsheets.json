@@ -469,12 +469,6 @@
                 "url": "Commands",
                 "cheats": [
                     {
-                        "name": "Build",
-                        "codes": [
-                            "docker build -t <i>username/image-name:tag<i> ."
-                        ]
-                    },
-                    {
                         "name": "Run",
                         "codes": [
                             "docker run -d -p <i>80:80</i> -v <i>volume-name</i>:<i>/dir</i> --name <i>container-name</i> --restart always <i>image-name</i>"
@@ -482,7 +476,21 @@
                         "descriptions": [
                             "-d: detached",
                             "-p <i>outside-port:inside-port</i>",
-                            "-v: volume"
+                            "-v: volume",
+                            "--restart <i>always</i>: Always restart the container if it stops",
+                            "--rm: Remove the container when it exits"
+                        ]
+                    },
+                    {
+                        "name": "Manage containers",
+                        "codes": [
+                            "docker start/stop/restart <i>container-name</i>"
+                        ]
+                    },
+                    {
+                        "name": "Build",
+                        "codes": [
+                            "docker build -t <i>username/image-name:tag<i> ."
                         ]
                     },
                     {
@@ -532,6 +540,13 @@
                         ],
                         "descriptions": [
                             "-it: (required) interactive, tty"
+                        ]
+                    },
+                    {
+                        "name": "Copy a file from an image",
+                        "codes": [
+                            "docker run --rm <i>image-name</i> cat <i>file-name</i> > <i>local-file-name</i>",
+                            "docker run --rm <i>httpd:2.4</i> cat <i>/usr/local/apache2/conf/httpd.conf</i> > <i>my-httpd.conf</i>"
                         ]
                     },
                     {
