@@ -75,8 +75,7 @@ function Cheatsheet() {
 				<div ref={selectedTopicRef} className="selected-topic">
 					{(!selectedTopic?.name) ?
 						<div className="no-selected">
-							<i className="bi-exclamation-triangle-fill"></i>
-							<p>No topic selected from the list.</p>
+							<p>Select a topic from the list</p>
 						</div> :
 						<>
 							<div className="name">

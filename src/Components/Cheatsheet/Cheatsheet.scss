@@ -109,12 +109,11 @@ $mobile-size: 425px;
             margin-bottom: 30px;
 
             .no-selected {
-                display: flex;
-                justify-content: center;
-                gap: 7px;
-
-                i {
-                    color: #d3d324;
+                margin-top: 30px;
+                
+                p {
+                    font-size: 14px;
+                    text-align: center;
                 }
             }
 
