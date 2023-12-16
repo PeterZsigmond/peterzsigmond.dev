@@ -157,6 +157,7 @@ body {
             right: 30px;
             top: 30px;
             display: none;
+            cursor: pointer;
 
             @media (max-width: $menu-break) {
                 display: block;
