@@ -71,8 +71,8 @@ function Layout() {
         <Outlet />
 
         <footer>
-          <p className="copyright">Peter Zsigmond</p>
-          <p className="version">(v{version})</p>
+          <p className="copyright">peterzsigmond.dev</p>
+          <p className="version">{version}</p>
         </footer>
 
       </div>
