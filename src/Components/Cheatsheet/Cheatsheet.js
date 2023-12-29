@@ -42,7 +42,7 @@ function Cheatsheet() {
 		window.history.pushState({}, '', `/cheatsheet/${category.url}/${topic.url}`);
 	}
 
-    return (
+	return (
 		<div className="cheatsheet">
 			<h1>Cheatsheet</h1>
 			<div className="content">
@@ -114,7 +114,7 @@ function Cheatsheet() {
 
 			</div>
 		</div>
-    );
-  }
-  
-  export default Cheatsheet;
+	);
+}
+
+export default Cheatsheet;
