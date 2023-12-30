@@ -17,9 +17,13 @@ $mobile-size: 425px;
     h1 {
         text-align: center;
     }
-    
+
+	> p {
+		text-align: center;
+	}
+
     .content {
-        margin: 70px 15px 0px 15px;
+        margin: 33px 15px 0px 15px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

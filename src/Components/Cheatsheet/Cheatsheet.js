@@ -45,6 +45,8 @@ function Cheatsheet() {
 	return (
 		<div className="cheatsheet">
 			<h1>Cheatsheet</h1>
+			<p>A collection of shell commands for IT people.</p>
+
 			<div className="content">
 
 				<div className="categories">
