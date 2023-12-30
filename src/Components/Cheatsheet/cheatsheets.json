@@ -4,6 +4,30 @@
         "url": "Shell",
         "imgName": "shell",
         "topics": [
+			{
+				"name": "Zip",
+				"url": "Zip",
+				"cheats": [
+					{
+						"name": "Compress files with Zip",
+						"codes": [
+							"zip <i>file</i>.zip <i>file1 file2 file3</i>"
+						]
+					},
+					{
+						"name": "Compress directory with Zip",
+						"codes": [
+							"zip -r <i>file</i>.zip <i>directory</i>"
+						]
+					},
+					{
+						"name": "Decompress a Zip file",
+						"codes": [
+							"unzip <i>file</i>.zip"
+						]
+					}
+				]
+			},
             {
                 "name": "Split",
                 "url": "Split",
