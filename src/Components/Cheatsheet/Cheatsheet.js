@@ -57,16 +57,19 @@ function Cheatsheet() {
 									</div>
 									<p>{category.name}</p>
 								</div>
-								{category.topics.map((topic, topicIdx) => {
-									return (
-										<p
-											className={"topic" + ((topic === selectedTopic) ? " active" : "")}
-											key={topicIdx}
-											onClick={() => handleTopicSelect(category, topic)}>
-											{topic.name}
-										</p>
-									);
-								})}
+								{category.topics
+									.toSorted((a, b) => a.name.localeCompare(b.name))
+									.map((topic, topicIdx) => {
+										return (
+											<p
+												className={"topic" + ((topic === selectedTopic) ? " active" : "")}
+												key={topicIdx}
+												onClick={() => handleTopicSelect(category, topic)}>
+												{topic.name}
+											</p>
+										);
+									})
+								}
 							</div>
 						);
 					})}
