@@ -4,6 +4,11 @@ function Projects() {
 
 	const projects = [
 		{
+			img: 'salesforce-certification',
+			title: 'Salesforce Certification',
+			desc: 'I got Salesforce certified as a Platform Developer I.'
+		},
+		{
 			img: 'kubeflow',
 			title: 'Bachelor\'s thesis',
 			desc: 'Title: Management of machine learning application on a distributed container platform\n\n' +
