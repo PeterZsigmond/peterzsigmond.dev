@@ -223,9 +223,10 @@ $selector-break: 530px;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+			background-color: #33346C;
 
             &:hover {
-                background-color: #303169;
+				background-color: #2b2c5e;
             }
             
             &.active {
@@ -293,7 +294,6 @@ $selector-break: 530px;
 
             p {
                 margin-top: 19px;
-                font-weight: bold;
                 text-align: center;
                 font-size: 16px;
                 
