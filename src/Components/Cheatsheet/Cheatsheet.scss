@@ -167,26 +167,11 @@ $mobile-size: 425px;
                     }
                     
                     .copy {
-                        &:hover {
-                            i {
-                                color: #DDDDDD;
-                            }
-                        }
-                        
-                        cursor: pointer;
-                        display: flex;
-                        align-items: center;
-                        padding-left: 8px;
-                        padding-right: 12px;
-                        position: absolute;
-                        top: 0px;
-                        right: 0px;
-                        height: 100%;
-
-                        i {
-                            color: #808080;
-                            font-size: 13px;
-                        }
+						position: absolute;
+						top: 0px;
+						right: 0px;
+						height: 100%;
+						width: 37px;
                     }
                 }
     

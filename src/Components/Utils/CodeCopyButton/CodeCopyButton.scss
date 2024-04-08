@@ -1,0 +1,23 @@
+.codeCopyButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: inherit;
+	cursor: pointer;
+
+	.bi-clipboard {
+		color: #808080;
+		font-size: 13px;
+	}
+
+	&:hover {
+		.bi-clipboard {
+			color: #DDDDDD;
+		}
+	}
+	
+	.bi-check-lg {
+		color: #49733e;
+		font-size: 17px;
+	}
+}

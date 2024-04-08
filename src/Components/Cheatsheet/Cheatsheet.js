@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import parse from 'html-react-parser';
 import cheatsheets from './cheatsheets.json';
+import CodeCopyButton from '../Utils/CodeCopyButton/CodeCopyButton';
 import './Cheatsheet.scss';
 
 function Cheatsheet() {
@@ -97,8 +98,8 @@ function Cheatsheet() {
 														<span>$</span>
 														{parse(code)}
 													</p>
-													<div onClick={() => handleCodeCopy(code)} className="copy">
-														<i className="bi bi-copy"></i>
+													<div className="copy" onClick={() => handleCodeCopy(code)}>
+														<CodeCopyButton></CodeCopyButton>
 													</div>
 												</div>
 											);
