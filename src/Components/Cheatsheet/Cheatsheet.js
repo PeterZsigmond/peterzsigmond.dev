@@ -95,7 +95,7 @@ function Cheatsheet() {
 											return (
 												<div key={codeIdx} className="codeBlock">
 													<p className="code">
-														<span>$</span>
+														<span>&gt;</span>
 														{parse(code)}
 													</p>
 													<div className="copy" onClick={() => handleCodeCopy(code)}>
