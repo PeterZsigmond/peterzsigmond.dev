@@ -15,9 +15,9 @@ root.render(
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<About />} />
-					<Route path="projects" element={<Projects />} />
-					<Route path="contact" element={<Contact />} />
-					<Route path="cheatsheet/*" element={<Cheatsheet />} />
+					<Route path="Projects" element={<Projects />} />
+					<Route path="Contact" element={<Contact />} />
+					<Route path="Cheatsheet/*" element={<Cheatsheet />} />
 					<Route path="*" element={<NoPage />} />
 				</Route>
 			</Routes>

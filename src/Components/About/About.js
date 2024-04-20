@@ -38,7 +38,7 @@ function About() {
 					<h1>Hi there,<br />I'm <span>Peter Zsigmond!</span></h1>
 					<h2>IT Engineer</h2>
 					<p>I'm into Web development and DevOps.</p>
-					<Link to="/projects"><button>Check out my Projects</button></Link>
+					<Link to="/Projects"><button>Check out my Projects</button></Link>
 				</div>
 				<div className="right">
 					<div className="circle">

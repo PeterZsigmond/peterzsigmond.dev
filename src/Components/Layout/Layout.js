@@ -32,19 +32,19 @@ function Layout() {
 						</NavLink>
 					</div>
 					<div className="element" onClick={hideMenu}>
-						<NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ''}>
+						<NavLink to="/Projects" className={({ isActive }) => isActive ? "active" : ''}>
 							<i className="icon bi-check2-square"></i>
 							<p>Projects</p>
 						</NavLink>
 					</div>
 					<div className="element" onClick={hideMenu}>
-						<NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ''}>
+						<NavLink to="/Contact" className={({ isActive }) => isActive ? "active" : ''}>
 							<i className="icon bi-envelope"></i>
 							<p>Contact</p>
 						</NavLink>
 					</div>
 					<div className="element" onClick={hideMenu}>
-						<NavLink to="/cheatsheet" className={({ isActive }) => isActive ? "active" : ''}>
+						<NavLink to="/Cheatsheet" className={({ isActive }) => isActive ? "active" : ''}>
 							<i className="icon bi-file-code"></i>
 							<p>Cheatsheet</p>
 						</NavLink>

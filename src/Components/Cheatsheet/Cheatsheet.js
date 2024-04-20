@@ -12,7 +12,7 @@ function Cheatsheet() {
 
 	useEffect(() => {
 		const [categoryUrl, topicUrl] = locationData.pathname
-			.replaceAll('/cheatsheet', '')
+			.replaceAll('/Cheatsheet', '')
 			.split('/')
 			.filter(value => value);
 		let topic;
@@ -40,7 +40,7 @@ function Cheatsheet() {
 	function handleTopicSelect(category, topic) {
 		setSelectedTopic(topic);
 		scrollToSelectedTopic();
-		window.history.pushState({}, '', `/cheatsheet/${category.url}/${topic.url}`);
+		window.history.pushState({}, '', `/Cheatsheet/${category.url}/${topic.url}`);
 	}
 
 	return (
