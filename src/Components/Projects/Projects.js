@@ -12,7 +12,7 @@ function Projects() {
 		{
 			img: 'peterzsigmond.dev',
 			title: 'peterzsigmond.dev',
-			desc: 'This is my personal portfolio website. I made it in React, and used other tools like Sass and Docker.',
+			desc: 'This is my personal portfolio website. I made it in React, and also used other tools like Sass and Docker.',
 			date: 'March, 2023',
 			link_text: 'GitHub',
 			link: 'https://github.com/PeterZsigmond/peterzsigmond.dev'
