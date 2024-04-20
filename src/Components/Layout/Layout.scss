@@ -29,6 +29,7 @@ body {
     margin: 0px;
     font-family: Proxima-Nova;
     color: $white;
+	background-color: #191A42;
 
     .sidebar {
         background-color: $sidebar;
@@ -153,7 +154,7 @@ body {
             width: 100%;
 
             &.hidden {
-                opacity: 0.9;
+                opacity: 0.5;
                 transition: opacity 0.2s linear;
             }
             
