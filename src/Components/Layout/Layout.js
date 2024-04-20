@@ -51,12 +51,12 @@ function Layout() {
 					</div>
 				</div>
 
-				<img
-					src={require("../../Images/github/github.png")}
-					alt="GitHub"
-					className="github"
-					onClick={() => window.open("https://github.com/PeterZsigmond", "_blank")}
-				/>
+				<div className="github" onClick={() => window.open("https://github.com/PeterZsigmond", "_blank")}>
+					<img
+						src={require("../../Images/github/github.png")}
+						alt="GitHub"
+					/>
+				</div>
 
 			</div>
 
