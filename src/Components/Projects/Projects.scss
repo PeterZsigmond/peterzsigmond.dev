@@ -55,10 +55,19 @@ $white: #DDDDDD;
                 margin-left: 15px;
             }
 
-            p {
+            .desc {
                 margin: 0px 15px 60px 15px;
                 white-space: pre-line;
             }
+
+			.date {
+				position: absolute;
+				bottom: 19px;
+				left: 15px;
+				font-size: 13px;
+				font-style: italic;
+				color: #aaaacc;
+			}
 
             a {
                 position: absolute;
