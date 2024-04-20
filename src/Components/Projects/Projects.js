@@ -10,12 +10,12 @@ function Projects() {
 			date: 'August, 2023'
 		},
 		{
-			img: 'kubeflow',
-			title: 'Bachelor\'s thesis',
-			desc: 'Title: Management of machine learning application on a distributed container platform\n\n' +
-				'While making my bachelor\'s thesis, I gained experiences with Machine Learning, Container orchestration, Automatization, Cloud services, etc. ' +
-				'I used Kubeflow as a ML workflow toolset, that runs on Kubernetes.',
-			date: 'December, 2022'
+			img: 'peterzsigmond.dev',
+			title: 'peterzsigmond.dev',
+			desc: 'This is my personal portfolio website. I made it in React, and used other tools like Sass and Docker.',
+			date: 'March, 2023',
+			link_text: 'GitHub',
+			link: 'https://github.com/PeterZsigmond/peterzsigmond.dev'
 		},
 		{
 			img: 'peterzsigmondOS',
@@ -29,12 +29,12 @@ function Projects() {
 			link: 'https://github.com/PeterZsigmond/peterzsigmondOS'
 		},
 		{
-			img: 'peterzsigmond.dev',
-			title: 'peterzsigmond.dev',
-			desc: 'This is my personal portfolio website. I made it in React, and used other tools like Sass and Docker.',
-			date: 'March, 2023',
-			link_text: 'GitHub',
-			link: 'https://github.com/PeterZsigmond/peterzsigmond.dev'
+			img: 'kubeflow',
+			title: 'Bachelor\'s thesis',
+			desc: 'Title: Management of machine learning application on a distributed container platform\n\n' +
+				'While making my bachelor\'s thesis, I gained experiences with Machine Learning, Container orchestration, Automatization, Cloud services, etc. ' +
+				'I used Kubeflow as a ML workflow toolset, that runs on Kubernetes.',
+			date: 'December, 2022'
 		}
 	];
 
