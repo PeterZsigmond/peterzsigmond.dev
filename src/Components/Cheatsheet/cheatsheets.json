@@ -1,0 +1,800 @@
+[
+    {
+        "name": "Shell",
+        "url": "Shell",
+        "imgName": "shell",
+        "topics": [
+			{
+				"name": "Zip",
+				"url": "Zip",
+				"cheats": [
+					{
+						"name": "Compress files with Zip",
+						"codes": [
+							"zip <i>file</i>.zip <i>file1 file2 file3</i>"
+						]
+					},
+					{
+						"name": "Compress directory with Zip",
+						"codes": [
+							"zip -r <i>file</i>.zip <i>directory</i>"
+						]
+					},
+					{
+						"name": "Decompress a Zip file",
+						"codes": [
+							"unzip <i>file</i>.zip"
+						]
+					}
+				]
+			},
+            {
+                "name": "Split",
+                "url": "Split",
+                "cheats": [
+                    {
+                        "name": "Split a file into pieces",
+                        "codes": [
+                            "split -d -b <i>10K/M/G file file.</i>"
+                        ],
+                        "descriptions": [
+                            "-d: use numeric suffixes, not alphabetic",
+                            "-b: bytes",
+                            "Result: file.00 file.01 ..."
+                        ]
+                    },
+                    {
+                        "name": "Join pieces into a file",
+                        "codes": [
+                            "cat <i>file.*</i> > <i>file</i>"
+                        ],
+                        "descriptions": [
+                            "Result: the original file"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "GPG encrypt",
+                "url": "GPG-encrypt",
+                "cheats": [
+                    {
+                        "name": "Encrypt",
+                        "codes": [
+                            "sudo gpg --symmetric --no-symkey-cache <i>file</i>"
+                        ],
+                        "descriptions": [
+                            "--no-symkey-cache: It will not cache the passphrase on the computer",
+                            "Result: <i>file.gpg</i>"
+                        ]
+                    },
+                    {
+                        "name": "Decrypt",
+                        "codes": [
+                            "sudo gpg --output <i>file</i> --decrypt <i>file.gpg</i>"
+                        ],
+                        "descriptions": [
+                            "Result: <i>file</i>"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Find",
+                "url": "Find",
+                "cheats": [
+                    {
+                        "name": "Search for files in a directory hierarchy",
+                        "codes": [
+                            "find <i>dir/</i> -name '<i>*.txt</i>'"
+                        ],
+                        "descriptions": [
+                            "Case-insensitive: Use -iname instead of -name"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Disk Usage",
+                "url": "Disk-Usage",
+                "cheats": [
+                    {
+                        "name": "File system disk space usage",
+                        "codes": [
+                            "df -h"
+                        ],
+                        "descriptions": [
+                            "-h: human-readable"
+                        ]
+                    },
+                    {
+                        "name": "Estimate file space usage",
+                        "codes": [
+                            "du -ah <i>dir/</i>"
+                        ],
+                        "descriptions": [
+                            "-a: all files",
+                            "-h: human-readable"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Temperature",
+                "url": "Temperature",
+                "cheats": [
+                    {
+                        "name": "Monitor the temperatures, voltages, and fans",
+                        "codes": [
+                            "apt install lm-sensors",
+                            "watch sensors"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Partitioning",
+                "url": "Partitioning",
+                "cheats": [
+                    {
+                        "name": "Print block device attributes",
+                        "codes": [
+                            "blkid"
+                        ]
+                    },
+                    {
+                        "name": "List block devices",
+                        "codes": [
+                            "lsblk -f"
+                        ],
+                        "descriptions": [
+                            "-f: info about filesystems"
+                        ]
+                    },
+                    {
+                        "name": "Manipulate disk partition table",
+                        "codes": [
+                            "fdisk <i>/dev/sda</i>"
+                        ]
+                    },
+                    {
+                        "name": "Interactive GUID partition table (GPT) manipulator",
+                        "codes": [
+                            "gdisk <i>/dev/sda</i>"
+                        ]
+                    },
+                    {
+                        "name": "Build a filesystem",
+                        "codes": [
+                            "mkfs.ext4/ntfs -f -L <i>label</i> <i>/dev/sda1</i>"
+                        ],
+                        "descriptions": [
+                            "-f: (NTFS only) fast format (no zeroing and bad sector checking)",
+                            "-L: volume label"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Curl",
+                "url": "Curl",
+                "cheats": [
+                    {
+                        "name": "Transfer data to or from a server",
+                        "codes": [
+                            "curl <i>Options URL</i>",
+                            "curl -X <i>POST</i> -H <i>'Content-Type: application/json'</i> -d <i>'{\"name\":\"value\"}'</i> <i>https://echo.zuplo.io</i>"
+                        ],
+                        "descriptions": [
+                            "-u <i>username</i> (Basic auth, will ask for password)",
+                            "-k: insecure (no SSL verification)",
+                            "-o <i>output.txt</i>",
+                            "--head: response headers only",
+                            "-X <i>method</i>",
+                            "-H <i>header</i>",
+                            "-d <i>data</i>",
+                            "-v: verbose"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Net Speed Test",
+                "url": "Net-Speed-Test",
+                "cheats": [
+                    {
+                        "name": "Testing internet bandwidth",
+                        "codes": [
+                            "apt/brew install speedtest-cli",
+                            "speedtest"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Screen",
+                "url": "Screen",
+                "cheats": [
+                    {
+                        "name": "Start session",
+                        "codes": [
+                            "screen"
+                        ],
+                        "descriptions": [
+                            "-ls: List sessions",
+                            "-r: <i>id</i> (Resume session)"
+                        ]
+                    },
+                    {
+                        "name": "Key bindings",
+                        "descriptions": [
+                            "Ctrl+a :quit Kill session",
+                            "Ctrl+a c Create a new window (with shell)",
+                            "Ctrl+a \" List all windows",
+                            "Ctrl+a 0 Switch to window 0 (by number)",
+                            "Ctrl+a A Rename the current window",
+                            "Ctrl+a S Split current region horizontally into two regions",
+                            "Ctrl+a | Split current region vertically into two regions",
+                            "Ctrl+a Tab Switch the input focus to the next region",
+                            "Ctrl+a Ctrl+a Toggle between the current and previous windows",
+                            "Ctrl+a Q Close all regions but the current one",
+                            "Ctrl+a X Close the current region",
+                            "Ctrl+d Detach"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Grep",
+                "url": "Grep",
+                "cheats": [
+                    {
+                        "name": "Search in files",
+                        "codes": [
+                            "grep <i>Options Pattern Files</i>",
+                            "grep -rni <i>\"text\"</i> ."
+                        ],
+                        "descriptions": [
+                            "-r: recursive",
+                            "-n: display line number",
+                            "-i: case-insensitive"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "FTP client",
+                "url": "FTP-client",
+                "cheats": [
+                    {
+                        "name": "Install",
+                        "codes": [
+                            "apt/brew install ncftp"
+                        ]
+                    },
+                    {
+                        "name": "Open connection",
+                        "codes": [
+                            "cd <i>workdir</i>",
+                            "ncftp -u <i>username</i> -p <i>password</i> <i>host</i>"
+                        ]
+                    },
+                    {
+                        "name": "Commands",
+                        "codes": [
+                            "help",
+                            "ls",
+                            "cd <i>dir</i>",
+                            "get <i>file</i>",
+                            "put <i>file</i>",
+                            "quit"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Random file generator",
+                "url": "Random-file-generator",
+                "cheats": [
+                    {
+                        "name": "Generating a file of given size, with random bytes",
+                        "codes": [
+                            "dd if=/dev/random of=<i>file</i> bs=<i>1M</i> count=<i>64</i>"
+                        ],
+                        "descriptions": [
+                            "if: input file",
+                            "of: output file",
+                            "bs: block size [K/M/G] (don't be too big, because memory will run out)",
+                            "count: number of blocks",
+                            "Total file size: (bs * count)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Git",
+                "url": "Git",
+                "cheats": [
+                    {
+                        "name": "Config",
+                        "codes": [
+                            "git config --global user.name \"<i>name</i>\"",
+                            "git config --global user.email \"<i>email</i>\""
+                        ],
+                        "descriptions": [
+                            "--global: not just in working directory"
+                        ]
+                    },
+                    {
+                        "name": "Initialize",
+                        "codes": [
+                            "git init"
+                        ],
+                        "descriptions": [
+                            "Create an empty Git repository"
+                        ]
+                    },
+                    {
+                        "name": "Clone",
+                        "codes": [
+                            "git clone <i>URL</i>"
+                        ]
+                    },
+                    {
+                        "name": "Status",
+                        "codes": [
+                            "git status"
+                        ]
+                    },
+                    {
+                        "name": "Add file",
+                        "codes": [
+                            "git add <i>file</i>"
+                        ]
+                    },
+                    {
+                        "name": "Unstage, while retaining changes in working directory",
+                        "codes": [
+                            "git reset <i>file</i>"
+                        ]
+                    },
+                    {
+                        "name": "Undo unstaged changes",
+                        "codes": [
+                            "git restore <i>file</i>"
+                        ],
+                        "descriptions": [
+                            "Will undo an unstaged file to the last committed version"
+                        ]
+                    },
+                    {
+                        "name": "Commit",
+                        "codes": [
+                            "git commit -m \"<i>message</i>\""
+                        ]
+                    },
+                    {
+                        "name": "List branches",
+                        "codes": [
+                            "git branch"
+                        ]
+                    },
+                    {
+                        "name": "Create a new branch",
+                        "codes": [
+                            "git branch <i>name</i>"
+                        ]
+                    },
+                    {
+                        "name": "Switch to another branch",
+                        "codes": [
+                            "git checkout <i>branch</i>"
+                        ],
+                        "descriptions": [
+                            "-b <i>name</i>: create a new branch"
+                        ]
+                    },
+                    {
+                        "name": "Merge",
+                        "codes": [
+                            "git merge <i>branch</i>"
+                        ],
+                        "descriptions": [
+                            "Merge specified branch into the current one"
+                        ]
+                    },
+                    {
+                        "name": "Show all commits",
+                        "codes": [
+                            "git log",
+                            "git log --graph --all --oneline"
+                        ]
+                    },
+                    {
+                        "name": "Add remote URL as an alias",
+                        "codes": [
+                            "git remote add <i>alias</i> <i>URL</i>"
+                        ]
+                    },
+                    {
+                        "name": "Fetch down all branches",
+                        "codes": [
+                            "git fetch"
+                        ]
+                    },
+                    {
+                        "name": "Merge remote branch into your current branch",
+                        "codes": [
+                            "git merge <i>alias</i>/<i>branch</i>"
+                        ]
+                    },
+                    {
+                        "name": "Push to remote repository",
+                        "codes": [
+                            "git push <i>alias</i> <i>branch</i>"
+                        ]
+                    },
+                    {
+                        "name": "Fetch and merge commits from remote branch",
+                        "codes": [
+                            "git pull"
+                        ]
+                    },
+                    {
+                        "name": "Temporarily store modified, tracked files, to change branch",
+                        "codes": [
+                            "git stash [push/pop/list/drop]"
+                        ],
+                        "descriptions": [
+                            "Pushes/pops from a stack"
+                        ]
+                    },
+                    {
+                        "name": "Undo a commit",
+                        "codes": [
+                            "git revert <i>commit</i>"
+                        ],
+                        "descriptions": [
+                            "Forward-moving undo existing commits",
+                            "Will create a new commit that inverses the changes"
+                        ]
+                    },
+                    {
+                        "name": "Go back to a previous commit",
+                        "codes": [
+                            "git checkout -b <i>name</i> <i>commit</i>"
+                        ],
+                        "descriptions": [
+                            "Creates a new branch, that points to the given commit"
+                        ]
+                    },
+                    {
+                        "name": "Delete a branch",
+                        "codes": [
+                            "git branch -d <i>branch</i>",
+                            "git push origin --delete <i>branch</i>"
+                        ],
+                        "descriptions": [
+                            "0: locally",
+                            "1: remotely"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Docker",
+        "url": "Docker",
+        "imgName": "docker",
+        "topics": [
+            {
+                "name": "Commands",
+                "url": "Commands",
+                "cheats": [
+                    {
+                        "name": "Run",
+                        "codes": [
+                            "docker run -d -p <i>80:80</i> -v <i>volume-name</i>:<i>/dir</i> --name <i>container-name</i> --restart always <i>image-name</i>"
+                        ],
+                        "descriptions": [
+                            "-d: detached",
+                            "-p <i>outside-port:inside-port</i>",
+                            "-v: volume",
+                            "--restart <i>always</i>: Always restart the container if it stops",
+                            "--rm: Remove the container when it exits"
+                        ]
+                    },
+                    {
+                        "name": "Manage containers",
+                        "codes": [
+                            "docker start/stop/restart <i>container-name</i>"
+                        ]
+                    },
+                    {
+                        "name": "Build",
+                        "codes": [
+                            "docker build -t <i>username/image-name:tag<i> ."
+                        ]
+                    },
+                    {
+                        "name": "Show images",
+                        "codes": [
+                            "docker image ls",
+                            "docker image rm <i>name</i>"
+                        ],
+                        "descriptions": [
+                            "rm: remove"
+                        ]
+                    },
+                    {
+                        "name": "List containers",
+                        "codes": [
+                            "docker ps -a"
+                        ],
+                        "descriptions": [
+                            "-a: all"
+                        ]
+                    },
+                    {
+                        "name": "Login",
+                        "codes": [
+                            "docker login/logout"
+                        ]
+                    },
+                    {
+                        "name": "Push",
+                        "codes": [
+                            "docker push <i>image-name</i>"
+                        ]
+                    },
+                    {
+                        "name": "Volumes",
+                        "codes": [
+                            "docker volume create <i>name</i>",
+                            "docker volume ls",
+                            "docker volume inspect <i>name</i>",
+                            "docker volume rm <i>name</i>"
+                        ]
+                    },
+                    {
+                        "name": "Shell into container",
+                        "codes": [
+                            "docker exec -it <i>container-name</i> /bin/bash"
+                        ],
+                        "descriptions": [
+                            "-it: (required) interactive, tty"
+                        ]
+                    },
+                    {
+                        "name": "Copy a file from an image",
+                        "codes": [
+                            "docker run --rm <i>image-name</i> cat <i>file-name</i> > <i>local-file-name</i>",
+                            "docker run --rm <i>httpd:2.4</i> cat <i>/usr/local/apache2/conf/httpd.conf</i> > <i>my-httpd.conf</i>"
+                        ]
+                    },
+                    {
+                        "name": "Scan image for vulnerabilities",
+                        "codes": [
+                            "docker scan <i>image-name</i>"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "PhpMyAdmin",
+                "url": "PhpMyAdmin",
+                "cheats": [
+                    {
+                        "name": "Run it containerized",
+                        "codes": [
+                            "docker run -d -p <i>8080:80</i> -e PMA_ARBITRARY=1 --rm --name <i>phpmyadmin</i> phpmyadmin"
+                        ],
+                        "descriptions": [
+                            "-d: detached",
+                            "-e PMA_ARBITRARY=1: Use arbitrary servers",
+                            "--rm: Remove the container when it exits"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "qBittorrent",
+                "url": "qBittorrent",
+                "cheats": [
+                    {
+                        "name": "Run it containerized",
+                        "codes": [
+                            "docker run -d -p 8080:8080 -p 6881:6881/tcp -p 6881:6881/udp -v <i>./downloads</i>:/downloads wernight/qbittorrent"
+                        ],
+                        "descriptions": [
+                            "-d: detached",
+                            "-v: volume",
+                            "username: admin, password: adminadmin"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "JavaScript",
+        "url": "JavaScript",
+        "imgName": "js",
+        "topics": [
+            {
+                "name": "Node.js, npm",
+                "url": "Node-js-npm",
+                "cheats": [
+                    {
+                        "name": "Install Node.js with Homebrew",
+                        "codes": [
+                            "brew install node"
+                        ]
+                    },
+                    {
+                        "name": "Get version",
+                        "codes": [
+                            "node -v",
+                            "npm -v"
+                        ]
+                    },
+                    {
+                        "name": "Upgrade npm",
+                        "codes": [
+                            "npm i -g npm@latest"
+                        ]
+                    },
+                    {
+                        "name": "List installed packages",
+                        "codes": [
+                            "npm ls",
+                            "npm ls -g"
+                        ],
+                        "descriptions": [
+                            "-g: global"
+                        ]
+                    },
+                    {
+                        "name": "Install a package",
+                        "codes": [
+                            "npm i",
+                            "npm i <i>package</i>",
+                            "npm i -g <i>package</i>"
+                        ],
+                        "descriptions": [
+                            "no arg: from package.json",
+                            "-g: global"
+                        ]
+                    },
+                    {
+                        "name": "Remove a package",
+                        "codes": [
+                            "npm rm <i>package</i>",
+                            "npm rm -g <i>package</i>"
+                        ],
+                        "descriptions": [
+                            "-g: global"
+                        ]
+                    },
+                    {
+                        "name": "Update packages",
+                        "codes": [
+                            "npm update"
+                        ],
+                        "descriptions": [
+                            "^: latest minor version",
+                            "~: latest patch version",
+                            "--save: update values in package.json",
+                            "-g: global"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "React",
+                "url": "React",
+                "cheats": [
+                    {
+                        "name": "Create a React App",
+                        "codes": [
+                            "npx create-next-app@latest",
+                            "npx create-react-app@latest my-app"
+                        ],
+                        "descriptions": [
+                            "0: Next.js (recommended)",
+                            "1: Create React App"
+                        ]
+                    },
+                    {
+                        "name": "Run local server",
+                        "codes": [
+                            "npm run dev/start"
+                        ],
+                        "descriptions": [
+                            "dev: Next.js",
+                            "start: Create React App"
+                        ]
+                    },
+                    {
+                        "name": "Build",
+                        "codes": [
+                            "npm run build"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+	{
+		"name": "Salesforce",
+        "url": "Salesforce",
+        "imgName": "salesforce",
+		"topics": [
+			{
+				"name": "CLI",
+				"url": "CLI",
+				"cheats": [
+					{
+						"name": "Install",
+						"codes": [
+							"npm i -g @salesforce/cli"
+						]
+					},
+					{
+						"name": "Update",
+						"codes": [
+							"sf update"
+						]
+					},
+					{
+						"name": "Generate manifest with all metadata from org",
+						"codes": [
+							"sf project generate manifest -d <i>./manifest</i> --from-org <i>org</i>"
+						],
+						"descriptions": [
+							"-d: output directory",
+							"--from-org: username or alias of the org",
+							"-n: name of the manifest to create"
+						]
+					},
+					{
+						"name": "Retrieve metadata",
+						"codes": [
+							"sf retrieve metadata -x <i>manifest/package.xml</i>",
+							"sf retrieve metadata -m '<i>ApexClass:Opportunity*</i>'"
+						],
+						"descriptions": [
+							"-x: manifest file",
+							"-m: metadata name (* = wildcard)"
+						]
+					},
+					{
+						"name": "Deploy metadata",
+						"codes": [
+							"sf deploy metadata -x <i>manifest/package.xml</i>",
+							"sf deploy metadata -m '<i>ApexClass:Opportunity*</i>'"
+						],
+						"descriptions": [
+							"-x: manifest file",
+							"-m: metadata name (* = wildcard)"
+						]
+					},
+					{
+						"name": "Run tests",
+						"codes": [
+							"sf apex run test -y -c -n <i>ApexTestClass1</i> -n <i>ApexTestClass2</i>",
+							"sf apex run test -y -c -t <i>ApexTestClass.testMethod</i>"
+						],
+						"descriptions": [
+							"-y: synchronous",
+							"-c: coverage",
+							"-n: apex test class names",
+							"-t: test methods"
+						]
+					}
+				]
+			}
+		]
+	}
+]

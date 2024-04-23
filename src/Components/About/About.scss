@@ -2,10 +2,10 @@ $white: #DDDDDD;
 $green: #3F9F4E;
 $element: #3A3B73;
 
-$hero-break-1: 930px;
-$hero-break-2: 570px;
-$hero-break-3: 450px;
-$hero-break-4: 360px;
+$media-breakpoint-m: 930px;
+$media-breakpoint-s: 570px;
+$media-breakpoint-xs: 450px;
+$media-breakpoint-xxs: 360px;
 $selector-break: 530px;
 
 .hero {
@@ -13,11 +13,11 @@ $selector-break: 530px;
     display: flex;
     justify-content: center;
     
-    @media (max-width: $hero-break-1) {
+    @media (max-width: $media-breakpoint-m) {
         padding: 0px 15px;
     }
 
-    @media (max-width: $hero-break-2) {
+    @media (max-width: $media-breakpoint-s) {
         margin-bottom: 50px;
     }
 
@@ -44,23 +44,23 @@ $selector-break: 530px;
             color: $green;
             line-height: 56px;
             
-            @media (max-width: $hero-break-1) {
+            @media (max-width: $media-breakpoint-m) {
                 font-size: 35px;
                 line-height: 35px;
             }
             
-            @media (max-width: $hero-break-2) {
+            @media (max-width: $media-breakpoint-s) {
                 font-size: 30px;
                 line-height: 30px;
                 margin-bottom: 10px;
             }
             
-            @media (max-width: $hero-break-3) {
+            @media (max-width: $media-breakpoint-xs) {
                 font-size: 26px;
                 line-height: 26px;
             }
 
-            @media (max-width: $hero-break-4) {
+            @media (max-width: $media-breakpoint-xxs) {
                 font-size: 22px;
                 line-height: 22px;
             }
@@ -80,19 +80,19 @@ $selector-break: 530px;
             margin-bottom: 15px;
             margin-top: 0px;
             
-            @media (max-width: $hero-break-1) {
+            @media (max-width: $media-breakpoint-m) {
                 font-size: 26px;
             }
             
-            @media (max-width: $hero-break-2) {
+            @media (max-width: $media-breakpoint-s) {
                 margin-bottom: 10px;
             }
             
-            @media (max-width: $hero-break-3) {
+            @media (max-width: $media-breakpoint-xs) {
                 font-size: 24px;
             }
 
-            @media (max-width: $hero-break-4) {
+            @media (max-width: $media-breakpoint-xxs) {
                 font-size: 20px;
             }
         }
@@ -101,16 +101,16 @@ $selector-break: 530px;
             font-size: 19px;
             margin-bottom: 20px;
 
-            @media (max-width: $hero-break-1) {
+            @media (max-width: $media-breakpoint-m) {
                 font-size: 16px;
             }
 
-            @media (max-width: $hero-break-2) {
+            @media (max-width: $media-breakpoint-s) {
                 font-size: 15px;
                 margin-bottom: 15px;
             }
 
-            @media (max-width: $hero-break-4) {
+            @media (max-width: $media-breakpoint-xxs) {
                 font-size: 13px;
                 margin-bottom: 15px;
             }
@@ -128,12 +128,21 @@ $selector-break: 530px;
             cursor: pointer;
             color: $white;
             padding-top: 2px;
+			transition: font-size 0.2s;
+
+			&:hover {
+				font-size: 17px;
+			}
             
-            @media (max-width: $hero-break-2) {
+            @media (max-width: $media-breakpoint-s) {
                 width: 180px;
                 height: 32px;
                 font-size: 14px;
                 padding-top: 0px;
+
+				&:hover {
+					font-size: 15px;
+				}
             }
         }
     }
@@ -147,17 +156,17 @@ $selector-break: 530px;
             overflow: hidden;
             position: relative;
 
-            @media (max-width: $hero-break-1) {
+            @media (max-width: $media-breakpoint-m) {
                 width: 150px;
                 height: 150px;
             }
 
-            @media (max-width: $hero-break-2) {
+            @media (max-width: $media-breakpoint-s) {
                 width: 90px;
                 height: 90px;
             }
 
-            @media (max-width: $hero-break-4) {
+            @media (max-width: $media-breakpoint-xxs) {
                 width: 80px;
                 height: 80px;
             }
@@ -223,9 +232,10 @@ $selector-break: 530px;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+			background-color: #33346C;
 
             &:hover {
-                background-color: #303169;
+				background-color: #2b2c5e;
             }
             
             &.active {
@@ -257,7 +267,7 @@ $selector-break: 530px;
             gap: 12px;
         }
         
-        @media (max-width: $hero-break-4) {
+        @media (max-width: $media-breakpoint-xxs) {
             gap: 11px;
         }
 
@@ -268,12 +278,12 @@ $selector-break: 530px;
             width: 112px;
             padding-top: 1px;
 
-            @media (max-width: $hero-break-2) {
+            @media (max-width: $media-breakpoint-s) {
                 height: 107px;
                 width: 100px;
             }
 
-            @media (max-width: $hero-break-4) {
+            @media (max-width: $media-breakpoint-xxs) {
                 height: 94px;
                 width: 88px;
             }
@@ -285,7 +295,7 @@ $selector-break: 530px;
                 margin: auto;
                 margin-top: 19px;
                 
-                @media (max-width: $hero-break-2) {
+                @media (max-width: $media-breakpoint-s) {
                     height: 30px;
                     width: 30px;
                 }
@@ -293,15 +303,14 @@ $selector-break: 530px;
 
             p {
                 margin-top: 19px;
-                font-weight: bold;
                 text-align: center;
                 font-size: 16px;
                 
-                @media (max-width: $hero-break-2) {
+                @media (max-width: $media-breakpoint-s) {
                     font-size: 14px;
                 }
 
-                @media (max-width: $hero-break-3) {
+                @media (max-width: $media-breakpoint-xs) {
                     font-size: 13px;
                 }
             }

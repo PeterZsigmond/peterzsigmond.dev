@@ -1,67 +1,126 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import parse from 'html-react-parser';
-import { cheatsheets } from "./CheatSheets";
+import cheatsheets from './cheatsheets.json';
+import CodeCopyButton from '../Utils/CodeCopyButton/CodeCopyButton';
 import './Cheatsheet.scss';
 
 function Cheatsheet() {
-
-	const [selected, setSelected] = useState([0, 0]);
-	let selectedTopic = cheatsheets[selected[0]].topics[selected[1]];
-
+	const [selectedTopic, setSelectedTopic] = useState({});
 	const selectedTopicRef = useRef();
+	const locationData = useLocation();
 
-    return (
+	useEffect(() => {
+		const [categoryUrl, topicUrl] = locationData.pathname
+			.replaceAll('/Cheatsheet', '')
+			.split('/')
+			.filter(value => value);
+		let topic;
+
+		if(categoryUrl && topicUrl) {
+			const category = cheatsheets.find(category => category.url === categoryUrl);
+			topic = category?.topics.find(topic => topic.url === topicUrl);
+		}
+
+		setSelectedTopic(topic || {});
+	}, [locationData]);
+
+	function handleCodeCopy(code) {
+		code = code.replaceAll('<i>', '').replaceAll('</i>', '');
+		navigator?.clipboard?.writeText(code);
+	}
+
+	function scrollToSelectedTopic() {
+		const CONTENT_WRAPS_AT_PIXEL = 973;
+		if(window.innerWidth <= CONTENT_WRAPS_AT_PIXEL) {
+			selectedTopicRef.current.scrollIntoView();
+		}
+	}
+
+	function handleTopicSelect(category, topic) {
+		setSelectedTopic(topic);
+		scrollToSelectedTopic();
+		window.history.pushState({}, '', `/Cheatsheet/${category.url}/${topic.url}`);
+	}
+
+	return (
 		<div className="cheatsheet">
 			<h1>Cheatsheet</h1>
+			<p>A collection of shell commands for IT people.</p>
 
 			<div className="content">
 
 				<div className="categories">
-					{cheatsheets.map((category, index_0) => {
+					{cheatsheets.map((category, categoryIdx) => {
 						return (
-							<div className="category" key={index_0}>
+							<div className="category" key={categoryIdx}>
 								<div className="name">
 									<div className="circle">
-										<img src={require("../../Images/cheatsheets/" + category.img + ".png")} alt={category.category} />
+										<img src={require(`../../Images/cheatsheets/${category.imgName}.png`)} alt={category.name} />
 									</div>
-									<p>{category.category}</p>
+									<p>{category.name}</p>
 								</div>
-								{category.topics.map((topic, index_1) => {
-									return (
-										<p className={"topic" + ((index_0 === selected[0] && index_1 === selected[1]) ? ' active' : '')}
-											key={index_1}
-											onClick={() => {
-												setSelected([index_0, index_1]);
-												selectedTopicRef.current.scrollIntoView();
-											}
-										}>
-											{topic.name}
-										</p>
-									);
-								})}
+								{category.topics
+									.toSorted((a, b) => a.name.localeCompare(b.name))
+									.map((topic, topicIdx) => {
+										return (
+											<p
+												className={"topic" + ((topic === selectedTopic) ? " active" : "")}
+												key={topicIdx}
+												onClick={() => handleTopicSelect(category, topic)}>
+												{topic.name}
+											</p>
+										);
+									})
+								}
 							</div>
 						);
 					})}
 				</div>
 
 				<div ref={selectedTopicRef} className="selected-topic">
-					<h3 className="name">{selectedTopic.name}</h3>
-					{selectedTopic.cheats.map((cheat, index) => {
-						return (
-							<div key={index}>
-								<h4 className="title">{cheat.name}</h4>
-								<p className="code">{parse(cheat.code)}</p>
-								<p className="desc">{parse(cheat.desc)}</p>
+					{(!selectedTopic?.name) ?
+						<div className="no-selected">
+							<p>Select a topic from the list</p>
+						</div> :
+						<>
+							<div className="name">
+								<h3>{selectedTopic.name}</h3>
 							</div>
-						);
-					})}
+							{selectedTopic.cheats.map((cheat, cheatIdx) => {
+								return (
+									<div key={cheatIdx} className="cheat">
+										<h4 className="title">{cheat.name}</h4>
+										{cheat.codes?.map((code, codeIdx) => {
+											return (
+												<div key={codeIdx} className="codeBlock">
+													<p className="code">
+														<span>&gt;</span>
+														{parse(code)}
+													</p>
+													<div className="copy" onClick={() => handleCodeCopy(code)}>
+														<CodeCopyButton></CodeCopyButton>
+													</div>
+												</div>
+											);
+										})}
+										{cheat.descriptions?.map((desc, descIdx) => {
+											return (
+												<p key={descIdx} className="desc">
+													{parse(desc)}
+												</p>
+											);
+										})}
+									</div>
+								);
+							})}
+						</>
+					}
 				</div>
 
 			</div>
-
 		</div>
-    );
-  }
-  
-  export default Cheatsheet;
-  
+	);
+}
+
+export default Cheatsheet;

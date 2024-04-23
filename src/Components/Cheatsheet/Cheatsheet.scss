@@ -2,8 +2,8 @@ $content-break: 958px;
 $mobile-size: 425px;
 
 @font-face {
-    font-family: SourceCodePro;
-    src: url(../../Fonts/sourcecodepro-regular.ttf);
+    font-family: SFMono-Regular;
+    src: url(../../Fonts/sfmono-regular.woff);
 }
 
 .cheatsheet {
@@ -17,9 +17,13 @@ $mobile-size: 425px;
     h1 {
         text-align: center;
     }
-    
+
+	> p {
+		text-align: center;
+	}
+
     .content {
-        margin: 70px 15px 0px 15px;
+        margin: 33px 15px 0px 15px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -107,33 +111,74 @@ $mobile-size: 425px;
             box-sizing: border-box;
             border-radius: 7px;
             margin-bottom: 30px;
-            
+
+            .no-selected {
+                margin-top: 30px;
+                
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+
             .name {
-                margin: 0px 0px 30px 0px;
-                font-size: 25px;
+                margin-bottom: 40px;
+
+                h3 {
+                    margin: 0px;
+                    font-size: 26px;
+                    text-align: center;
+                }
             }
 
-            .title {
-                margin: 0px 0px 10px 0px;
-                font-size: 20px;
-                font-weight: normal;
-            }
-
-            .code {
-                width: fit-content;
-                font-family: SourceCodePro;
-                background-color: #12122f;
-                color: #3F9F4E;
-                font-size: 13px;
-                margin-bottom: 10px;
-                padding: 8px 30px 8px 12px;
-                white-space: pre-line;
+            .cheat {
+                background-color: #2e2f5e;
+                padding: 20px;
                 border-radius: 5px;
-            }
 
-            .desc {
-                font-size: 14px;
-                margin-bottom: 30px;
+                &:not(:last-child) {
+                    margin-bottom: 35px;
+                }
+
+                .title {
+                    margin: 0px 0px 15px 0px;
+                    font-size: 18px;
+                    font-weight: normal;
+                }
+    
+                .codeBlock {
+                    width: fit-content;
+                    background-color: #17173c;
+                    border-radius: 5px;
+                    margin-bottom: 8px;
+                    position: relative;
+                    border: 1px solid #49733e;
+
+                    .code {
+                        font-family: SFMono-Regular;
+                        font-size: 12px;
+                        padding: 10px 56px 10px 12px;
+                        display: inline-block;
+
+                        span {
+                            margin-right: 10px;
+                            color: #808080;
+                        }
+                    }
+                    
+                    .copy {
+						position: absolute;
+						top: 0px;
+						right: 0px;
+						height: 100%;
+						width: 37px;
+                    }
+                }
+    
+                .desc {
+                    font-size: 12px;
+                    color: #7d7e91;
+                }
             }
         }
     }

@@ -13,12 +13,17 @@ $white: #DDDDDD;
     }
     
     .cards {
-        margin: 70px 30px 0px 30px;
+        margin: 70px 100px 0px 100px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 24px;
+        
+        @media (max-width: 830px) {
+			margin-left: 30px;
+			margin-right: 30px;
+			justify-content: center;
+        }
         
         @media (max-width: 690px) {
             margin-top: 50px;
@@ -46,13 +51,23 @@ $white: #DDDDDD;
 
             h3 {
                 font-size: 22px;
+				font-weight: normal;
                 margin-left: 15px;
             }
 
-            p {
+            .desc {
                 margin: 0px 15px 60px 15px;
                 white-space: pre-line;
             }
+
+			.date {
+				position: absolute;
+				bottom: 19px;
+				left: 15px;
+				font-size: 13px;
+				font-style: italic;
+				color: #aaaacc;
+			}
 
             a {
                 position: absolute;

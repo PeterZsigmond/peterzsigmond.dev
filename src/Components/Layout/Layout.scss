@@ -29,6 +29,7 @@ body {
     margin: 0px;
     font-family: Proxima-Nova;
     color: $white;
+	background-color: #191A42;
 
     .sidebar {
         background-color: $sidebar;
@@ -119,10 +120,23 @@ body {
             margin-right: auto;
             left: 0;
             right: 0;
-            bottom: 24px;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
+            bottom: 19px;
+			width: 50px;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+			border-radius: 100px;
+			
+			&:hover {
+				background-color: #2E316D;
+			}
+			
+			img {
+				width: 40px;
+				height: 40px;
+				margin-top: 5px;
+			}
         }
     }
 
@@ -140,7 +154,7 @@ body {
             width: 100%;
 
             &.hidden {
-                opacity: 0.9;
+                opacity: 0.5;
                 transition: opacity 0.2s linear;
             }
             
@@ -157,6 +171,7 @@ body {
             right: 30px;
             top: 30px;
             display: none;
+            cursor: pointer;
 
             @media (max-width: $menu-break) {
                 display: block;
