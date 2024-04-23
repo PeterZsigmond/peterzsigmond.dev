@@ -725,5 +725,76 @@
                 ]
             }
         ]
-    }
+    },
+	{
+		"name": "Salesforce",
+        "url": "Salesforce",
+        "imgName": "salesforce",
+		"topics": [
+			{
+				"name": "CLI",
+				"url": "CLI",
+				"cheats": [
+					{
+						"name": "Install",
+						"codes": [
+							"npm i -g @salesforce/cli"
+						]
+					},
+					{
+						"name": "Update",
+						"codes": [
+							"sf update"
+						]
+					},
+					{
+						"name": "Generate manifest with all metadata from org",
+						"codes": [
+							"sf project generate manifest -d <i>./manifest</i> --from-org <i>org</i>"
+						],
+						"descriptions": [
+							"-d: output directory",
+							"--from-org: username or alias of the org",
+							"-n: name of the manifest to create"
+						]
+					},
+					{
+						"name": "Retrieve metadata",
+						"codes": [
+							"sf retrieve metadata -x <i>manifest/package.xml</i>",
+							"sf retrieve metadata -m '<i>ApexClass:Opportunity*</i>'"
+						],
+						"descriptions": [
+							"-x: manifest file",
+							"-m: metadata name (* = wildcard)"
+						]
+					},
+					{
+						"name": "Deploy metadata",
+						"codes": [
+							"sf deploy metadata -x <i>manifest/package.xml</i>",
+							"sf deploy metadata -m '<i>ApexClass:Opportunity*</i>'"
+						],
+						"descriptions": [
+							"-x: manifest file",
+							"-m: metadata name (* = wildcard)"
+						]
+					},
+					{
+						"name": "Run tests",
+						"codes": [
+							"sf apex run test -y -c -n <i>ApexTestClass1</i> -n <i>ApexTestClass2</i>",
+							"sf apex run test -y -c -t <i>ApexTestClass.testMethod</i>"
+						],
+						"descriptions": [
+							"-y: synchronous",
+							"-c: coverage",
+							"-n: apex test class names",
+							"-t: test methods"
+						]
+					}
+				]
+			}
+		]
+	}
 ]
