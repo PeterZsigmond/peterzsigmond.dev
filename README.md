@@ -20,5 +20,7 @@ npm start
 ```bash
 npm update
 npm run build
-docker build -t peterzsigmond/peterzsigmond.dev:<x.x.x> -t peterzsigmond/peterzsigmond.dev:latest .
+docker build --platform linux/amd64 -t peterzsigmond/peterzsigmond.dev:<x.x.x> -t peterzsigmond/peterzsigmond.dev:latest .
+docker push peterzsigmond/peterzsigmond.dev:<x.x.x>
+docker push peterzsigmond/peterzsigmond.dev:latest
 ```
