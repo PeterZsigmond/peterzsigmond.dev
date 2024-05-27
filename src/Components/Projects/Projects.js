@@ -4,9 +4,15 @@ function Projects() {
 
 	const projects = [
 		{
+			img: 'salesforce-certification-2',
+			title: 'Salesforce Certification II.',
+			desc: 'I got my second Salesforce certification, as a JavaScript Developer I.',
+			date: 'May, 2024'
+		},
+		{
 			img: 'salesforce-certification',
-			title: 'Salesforce Certification',
-			desc: 'I got Salesforce certified as a Platform Developer I.',
+			title: 'Salesforce Certification I.',
+			desc: 'I got my first Salesforce certification, as a Platform Developer I.',
 			date: 'August, 2023'
 		},
 		{
